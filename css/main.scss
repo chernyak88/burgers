@@ -1,0 +1,24 @@
+// Colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+$white: #fff;
+$grey: rgb(47, 50, 52);
+
+// Normalize
+@import "layout/normalize.css";
+
+// Settings
+@import "layout/fonts";
+@import "layout/layout";
+@import "layout/section";
+
+//Components
+@import "components/header";
+@import "components/pagination";
+
+//Sections
+@import "sections/heading.scss";
+@import "sections/best.scss";
+@import "sections/reviews.scss";
