@@ -4,94 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mr Burger</title>
-    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <title>Mr. Burger</title>
+    <link rel="icon" type="image/x-icon" href=".images/icons/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
   </head>
 <body>
   <div class="wrapper">
-
-    <div class="maincontent">
-
-
-      <!--Heading-->
-      <section class="section heading section-active">
-
+    <main class="main">
+      <section class="section-head">
         <div class="container">
-
-          <!--Header-->
-          <div class="header">
-
+          <header class="header">
             <div class="header__logo">
               <a href="index.html">
-              <img src="images/icons/logo.png" alt="Mr Burger">
-            </a>
+                <img src="images/icons/logo.png" alt="Mr Burger">
+              </a>
             </div>
-
-            <div class="header__btns">
-
-              <div class="header__menu">
-                <nav class="nav">
-                  <ul class="nav__list">
-                    <li class="nav__item">
-                      <a class="nav__link" href="" data-scroll-to="1">о нас</a>
+            <div class="header__links">
+              <aside class="sidebar">
+                <nav class="menu">
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">О нас</a>
                     </li>
-                    <li class="nav__item">
-                      <a class="nav__link" href="" data-scroll-to="2">бургеры</a>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Бургеры</a>
                     </li>
-                    <li class="nav__item">
-                      <a class="nav__link" href="" data-scroll-to="3">команда</a>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Команда</a>
                     </li>
-                    <li class="nav__item">
-                      <a class="nav__link" href="" data-scroll-to="4">меню</a>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Меню</a>
                     </li>
-                    <li class="nav__item">
-                      <a class="nav__link" href="" data-scroll-to="5">отзывы</a>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Отзывы</a>
                     </li>
-                    <li class="nav__item">
-                      <a class="nav__link" href="" data-scroll-to="5">Как мы работаем</a>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Как мы работаем</a>
                     </li>
-                    <li class="nav__item">
-                      <a class="nav__link" href="" data-scroll-to="7">контакты</a>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Контакты</a>
                     </li>
                   </ul>
                 </nav>
-              </div>
-
-              <div class="header__links">
-                <a class="order-link button" href="" data-scroll-to="6">Заказать</a>
-                <a class="hamburger-menu-link" href="">
-                  <div class="hamburger-menu-link__bars"></div>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
-          <!--Content-->
-          <div class="heading__container">
-            <div class="heading__content">
-              <div class="heading__left">
-                <img class="heading__img" src="images/steam_burger.png" alt="">
-              </div>
-              <div class="heading__right">
-                <div class="section__title">Мы делаем</div>
-                <div class="heading__subtitle">Натуральные бургеры</div>
+              </aside>
+              <div class="header__button">
+                <a class="header__button-btn" href="#">Заказать</a>
               </div>
             </div>
+          </header>
+          <div class="heading__content">
+            <div class="heading__left">
+              <img class="heading__img" src="images/steam_burger.png" alt="Mr. Burger">
+            </div>
+            <div class="heading__right">
+              <div class="section__title">Мы делаем</div>
+              <div class="heading__subtitle">Натуральные бургеры</div>
+            </div>
           </div>
-
-          <!--Next screen arrow-->
-          <a class="next-screen-arrow" href="#" data-scroll-to="1">
-            <img class="next-screen-arrow__icon" src="images/icons/arrow-scroll.png" alt=""></img>                 
+          <ul class="fixed-menu">
+            <li class="fixed-menu__item fixed-menu__item--active">
+              <a class="fixed-menu__link" href="#"></a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href="#"></a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href="#"></a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href="#"></a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href="#"></a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href="#"></a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href="#"></a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href="#"></a>
+            </li>
+          </ul>  
+          <a class="next-screen-arrow" href="#">
+            <img class="next-screen-arrow__icon" src="./images/icons/arrow-scroll.png" alt="Следующая страница"></img>                 
           </a>
         </div>
-
       </section>
 
       <!--Best-->
-      <section class="section best">
+      <section class="section-best">
 
         <div class="container">
           <div class="section__title section__title_black">Мы лучшие</div>
@@ -140,7 +143,7 @@
       </section>
 
       <!--Reviews-->
-      <section class="section reviews">
+      <section class="section-reviews">
         <ul class="reviews__list">
           <li class="reviews__item">
             <div class="review">
@@ -247,32 +250,8 @@
         </ul>
       </section>
 
-  <!--Pagination-->
-  <ul class="fixed-menu">
-    <li class="fixed-menu__item active">
-      <a class="fixed-menu__link" href="" data-scroll-to="0"></a>
-    </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="" data-scroll-to="1"></a>
-    </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="" data-scroll-to="2"></a>
-    </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="" data-scroll-to="3"></a>
-    </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="" data-scroll-to="4"></a>
-    </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="" data-scroll-to="5"></a>
-    </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="" data-scroll-to="6"></a>
-    </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="" data-scroll-to="7"></a>
-    </li>
-  </ul>
+     
+    </main>
+  </div>
 </body>
 </html>

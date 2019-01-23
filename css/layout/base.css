@@ -1,0 +1,69 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "ubuntu", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.42;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-width: 976px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 976px;
+  margin: 0 auto;
+}
+
+button {
+  border:none;
+  background: transparent;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
