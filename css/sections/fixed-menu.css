@@ -1,0 +1,32 @@
+.fixed-menu {
+  position:fixed;
+  height: 200px;
+  width: 20px;
+  top: 100px;
+  left: 75%;
+}
+
+.fixed-menu__item {
+  margin-bottom: 5px;
+  padding:5px;
+  height: 16px;
+  width: 16px;
+  position: relative;
+}
+
+.fixed-menu__item--active {
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.fixed-menu__link {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+}
