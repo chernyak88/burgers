@@ -38,4 +38,16 @@
   color: #fff;
   opacity: 0;
   transition: opacity .3s;
+  padding: 50px 20px;
+  font-size: 14px;
+
+  h3 {
+    font-family: "gagalinregular";
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
 }
