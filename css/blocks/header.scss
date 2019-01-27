@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+  &:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #fff;
+    margin: 0 15px;
+  }
+}
+
+.menu__link {
+  color: #fff;
+  text-decoration: none;
+}

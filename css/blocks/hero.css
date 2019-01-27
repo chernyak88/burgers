@@ -1,0 +1,3 @@
+.hero{background:url("../images/heading_bg.jpg") center center/cover no-repeat}.hero__container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%}.hero__order-btn{margin-left:15px}.hero__content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-flex:.75;-ms-flex:.75;flex:.75;line-height:1}.hero__content-img{margin-right:15px}.hero__content-desc{font-family:"lifehackmedium";font-size:55px;color:#fff}.arrow-down{position:absolute;left:50%;bottom:5%}
+
+/*# sourceMappingURL=hero.css.map */
