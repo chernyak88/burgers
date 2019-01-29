@@ -5,14 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mr. Burger</title>
-    <link rel="icon" type="image/x-icon" href=".images/icons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
   </head>
 <body>
   <div class="wrapper">
-    <main class="main">
-      <ul class="fixed-menu">
-          <li class="fixed-menu__item fixed-menu__item--active">
+    <div class="maincontent">
+        <section class="section hero">
+          <div class="container hero__container">
+            <header class="header">
+              <div class="logo">
+                  <img src="images/icons/logo.png" alt="Логотип Mr. Burger">
+              </div>
+              <div class="header__buttons">
+                <nav class="menu">
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">О нас</a>
+                    </li>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Бургеры</a>
+                    </li>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Команда</a>
+                    </li>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Меню</a>
+                    </li>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Как мы работаем</a>
+                    </li>
+                    <li class="menu__item">
+                      <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                  </ul>             
+                </nav> 
+                <a href="#" class="btn hero__order-btn">Заказать</a>
+              </div>
+            </header>
+            <div class="hero__content">
+              <div class="hero__content-img">
+                <img class="hero__burger-img" src="images/steam_burger.png" alt="Картинка бургера">
+              </div>
+              <div class="hero__content-text">
+                <h1 class="title">Мы делаем</h1>
+                <div class="hero__content-desc">натуральные бургеры</div>
+              </div>
+            </div>
+            <a href="#" class="arrow-down">
+              <img src="./images/icons/arrow-scroll.png" alt="Следующая секция" class="arrow-down__img">
+            </a>
+          </div>
+        </section>
+        <section class="section section_centered best">
+          <div class="container">
+            <div class="title best__title">Мы лучшие</div>
+            <ul class="best__list">
+              <li class="best__item">
+                <div class="best__img">
+                  <img src="./images/icons/meat.png" class="best__icon" alt="meat">
+                </div>
+                <div class="best__desc">
+                  <h3>100% свежее мясо</h3>
+                  <p>
+                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                  </p>
+                </div>
+              </li>
+              <li class="best__item">
+                <div class="best__img">
+                  <img src="./images/icons/hand.png" class="best__icon" alt="hand">
+                </div>
+                <div class="best__desc">
+                  <h3>Ручная сборка</h3>
+                  <p>
+                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                  </p>
+                </div>
+              </li>
+              <li class="best__item">
+                <div class="best__img">
+                  <img src="./images/icons/natural.png" class="best__icon" alt="natural">
+                </div>
+                <div class="best__desc">
+                  <h3>Натуральные ингредиенты</h3>
+                  <p>
+                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section reviews">
+          <ul class="reviews__list">
+            <li class="reviews__item" style="background-image: url('./images/photos/user1.jpg')">
+              <div class="reviews__item-hover">
+                <h3>Константин Спилберг</h3>
+                <p>
+                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                </p>
+                <div class="reviews__btn">
+                  <a class="btn btn_background_black" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item" style="background-image: url('./images/photos/user2.jpg')">
+              <div class="reviews__item-hover">
+                <h3>Константин Спилберг</h3>
+                <p>
+                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                </p>
+                <div class="reviews__btn">
+                  <a class="btn btn_background_black" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item" style="background-image: url('./images/photos/user3.jpg')">
+              <div class="reviews__item-hover">
+                <h3>Константин Спилберг</h3>
+                <p>
+                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                </p>
+                <div class="reviews__btn">
+                  <a class="btn btn_background_black" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item" style="background-image: url('./images/photos/user4.jpg')">
+              <div class="reviews__item-hover">
+                <h3 class="reviews__title">Константин Спилберг</h3>
+                <p>
+                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                </p>
+                <div class="reviews__btn">
+                  <a class="btn btn_background_black" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item" style="background-image: url('./images/photos/user5.jpg')">
+              <div class="reviews__item-hover">
+                <h3>Константин Спилберг</h3>
+                <p>
+                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                </p>
+                <div class="reviews__btn">
+                  <a class="btn btn_background_black" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item" style="background-image: url('./images/photos/user6.jpg')">
+              <div class="reviews__item-hover">
+                <h3 class="reviews__title">Константин Спилберг</h3>
+                <p>
+                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                </p>
+                <div class="reviews__btn">
+                  <a class="btn btn_background_black" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item" style="background-image: url('./images/photos/user7.jpg')">
+              <div class="reviews__item-hover">
+                <h3 class="reviews__title">Константин Спилберг</h3>
+                <p>
+                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                </p>
+                <div class="reviews__btn">
+                  <a class="btn btn_background_black" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item" style="background-image: url('./images/photos/user8.jpg')">
+              <div class="reviews__item-hover">
+                <h3 class="reviews__title">Константин Спилберг</h3>
+                <p>
+                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+                  могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                </p>
+                <div class="reviews__btn">
+                  <a class="btn btn_background_black" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- <section class="section section_centered order">
+          <div class="container">
+            <div class="title">Закажите доставку</div>
+            <form action="" class="form">
+              <div class="form__row">
+                <label for="" class="form__block">
+                  <div class="form__block-title">Имя</div>
+                  <input type="text" class="form__block-input">
+                </label>
+                <label for="" class="form__block">
+                    <div class="form__block-title">Телефон</div>
+                    <input type="text" class="form__block-input">
+                </label>
+              </div>
+            </form>
+          </div>
+        </section> -->
+      </div>
+      <nav class="fixed-menu">
+        <ul class="fixed-menu__list">
+          <li class="fixed-menu__item fixed-menu__item_active">
             <a class="fixed-menu__link" href="#"></a>
           </li>
           <li class="fixed-menu__item">
@@ -39,207 +247,8 @@
           <li class="fixed-menu__item">
               <a class="fixed-menu__link" href="#"></a>
           </li>
-        </ul>  
-        <section class="section-head">
-          <div class="container">
-            <div class="header">
-              <div class="logo">
-                <a href="index.html">
-                  <img src="images/icons/logo.png" alt="Mr Burger">
-                </a>
-              </div>
-              <div class="menu">
-                <ul class="menu__list">
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">О нас</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Бургеры</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Команда</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Меню</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Отзывы</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Как мы работаем</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a class="menu__list-link" href="#">Контакты</a>
-                  </li>
-                  <li class="menu__list-item menu__list-item--buy">
-                      <a class="menu__list-link" href="#">Заказать</a>
-                  </li>
-                </ul>  
-              </div>
-            </div>
-            <div class="header-content">
-              <div class="header-content__left">
-                <img class="header-content__img" src="images/steam_burger.png" alt="Mr. Burger">
-              </div>
-              <div class="header-content__right">
-                <div class="header-content__title">Мы делаем</div>
-                <div class="header-content__subtitle">натуральные бургеры</div>
-              </div>
-            </div>
-            <div class="header-next">
-              <a class="header-next__link" href="#">
-                <img class="header-next__icon" src="./images/icons/arrow-scroll.png" alt="Следующая страница"></img>                 
-              </a>
-            </div>
-          </div>
-        </section>
-        <section class="section-best">
-          <div class="container">
-            <div class="best-title">Мы лучшие</div>
-            <ul class="best-list">
-              <li class="best-item">
-                <div class="best-item__icon">
-                  <img src="./images/icons/meat.png" class="best-item__img" alt="meat">
-                </div>
-                <div class="best-item__desc">
-                  <div class="best-item__title">100% свежее мясо</div>
-                  <div class="best-item__text">
-                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
-                  </div>
-                </div>
-              </li>
-              <li class="best-item">
-                <div class="best-item__icon">
-                  <img src="./images/icons/hand.png" class="best-item__img" alt="hand">
-                </div>
-                <div class="best-item__desc">
-                  <div class="best-item__title">Ручная сборка</div>
-                  <div class="best-item__text">
-                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
-                  </div>
-                </div>
-              </li>
-              <li class="best-item">
-                <div class="best-item__icon">
-                  <img src="./images/icons/natural.png" class="best-item__img" alt="natural">
-                </div>
-                <div class="best-item__desc">
-                  <div class="best-item__title">Натуральные ингредиенты</div>
-                  <div class="best-item__text">
-                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="section-reviews">
-          <ul class="reviews__list">
-            <li class="reviews__item">
-              <div class="review">
-                <div class="review__photo" style="background-image: url('images/photos/user1.jpg')"></div>
-                <div class="review__hover">
-                  <div class="review__title">Юля Поспелова</div>
-                  <div class="review__shorttext">Если нужно «задобрить» мужа, заказываю домой доставку бургеров. Ну, и пивка, конечно. Действует безотказно!</div>
-                  <div class="review__button-wrap">
-                    <a class="review__view" href="#full-review">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__item">
-              <div class="review">
-                <div class="review__photo" style="background-image: url('images/photos/user2.jpg')"></div>
-                <div class="review__hover">
-                  <div class="review__title">Константин Спилберг</div>
-                  <div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-                    могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                  <div class="review__button-wrap">
-                    <a class="review__view" href="#full-review">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__item">
-              <div class="review">
-                <div class="review__photo" style="background-image: url('images/photos/user3.jpg')"></div>
-                <div class="review__hover">
-                  <div class="review__title">Лена Грин</div>
-                  <div class="review__shorttext">Знакомые постоянно спрашивают, как мне удается оставаться стройной и привлекательной в мои 46?! Мои друзья
-                    уже знают, что секрет весьма прост — бургерная диета!</div>
-                  <div class="review__button-wrap">
-                    <a class="review__view" href="#full-review">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__item">
-              <div class="review">
-                <div class="review__photo" style="background-image: url('images/photos/user4.jpg')"></div>
-                <div class="review__hover">
-                  <div class="review__title">Гриша Бэдбит</div>
-                  <div class="review__shorttext">Спрашивал у пацанов, как раскачаться. Все сошлись на том, что правильное питание даже важнее, чем нагрузки.
-                    Так что тренировки начал в Mr.Burger, ведь бургеры содержат в себе все необходимые нутриенты.</div>
-                  <div class="review__button-wrap">
-                    <a class="review__view" href="#full-review">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__item">
-              <div class="review">
-                <div class="review__photo" style="background-image: url('images/photos/user5.jpg')"></div>
-                <div class="review__hover">
-                  <div class="review__title">Егор Козырев</div>
-                  <div class="review__shorttext">Сперва был тренд на пиццу. Потом был тренд на роллы. Теперь настало время бургеров. Будь в тренде, чо.</div>
-                  <div class="review__button-wrap">
-                    <a class="review__view" href="#full-review">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__item">
-              <div class="review">
-                <div class="review__photo" style="background-image: url('images/photos/user6.jpg')"></div>
-                <div class="review__hover">
-                  <div class="review__title">Ева Спаржа</div>
-                  <div class="review__shorttext">Вообще-то я веган. Но один раз в неделю традиционно устраиваю себе поблажку и с удовольствием кушаю в Mr.Burger.
-                    Их говяжьи котлеты — это нечто! Go Vegan!</div>
-                  <div class="review__button-wrap">
-                    <a class="review__view" href="#full-review">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__item">
-              <div class="review">
-                <div class="review__photo" style="background-image: url('images/photos/user7.jpg')"></div>
-                <div class="review__hover">
-                  <div class="review__title">Иван Федорович</div>
-                  <div class="review__shorttext">Эти ребята творят из мяса что-то невероятное! Никогда не ел такого! Иногда ловлю себя на мысли, что я бы
-                    отдал им своего сумасшедшего пса!</div>
-                  <div class="review__button-wrap">
-                    <a class="review__view" href="#full-review">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="reviews__item">
-              <div class="review">
-                <div class="review__photo" style="background-image: url('images/photos/user8.jpg')"></div>
-                <div class="review__hover">
-                  <div class="review__title">Джейк Джилленхол</div>
-                  <div class="review__shorttext">В последнее время стал чаще летать на премьеры своих фильмов в Россию. Специально, чтобы покушать в Mr.Burger!
-                    Уверяю вас, у нас таких бургеров нет!</div>
-                  <div class="review__button-wrap">
-                    <a class="review__view" href="#full-review">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-    </main>
+        </ul>
+      </nav>  
   </div>
 </body>
 </html>

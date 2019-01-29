@@ -1,0 +1,28 @@
+.order {
+  background: url('../images/order_bg.jpg') center center no-repeat / cover;
+}
+
+.form {
+  color: #fff;
+}
+
+.form__row {
+  display: flex;
+}
+
+.form__block {
+  margin-right: 20px;
+  flex: 1;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form__block-input {
+  border-radius: 5px;
+  background: #fff;
+  border: none;
+  width: 100%;
+  padding: 5px 10px;
+}
