@@ -3,11 +3,23 @@
 }
 
 .form {
+  font-size: 14px;
+  font-weight: 300;
   color: #fff;
+  display: flex;
+
+  &__left {
+    margin-right: 20px;
+  }
+}
+
+.form__left, .form__right {
+  width: 50%;
 }
 
 .form__row {
   display: flex;
+  margin-bottom: 15px;
 }
 
 .form__block {
@@ -25,4 +37,8 @@
   border: none;
   width: 100%;
   padding: 5px 10px;
+}
+
+.form__block-title {
+  margin-bottom: 5px;
 }

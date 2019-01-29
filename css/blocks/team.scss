@@ -1,0 +1,96 @@
+.team {
+  background: url('../images/team_bg.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__block {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background: rgba(#2f3234, .93);
+    padding: 5% 4% 0 8%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.accordeon {
+  color: #fff;
+  font-size: 14px;
+
+  &__name {
+    font-family: "gagalinregular";
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  &__name:before {
+    content: "";
+    display: inline-block;
+    border: 8px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-top-color: #f7b33b;
+    border-bottom-width: 0px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    margin-right: 10px;
+  }
+
+  &__content {
+    display: flex;
+    margin-bottom: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__text {
+    width: 240px;
+
+    h3 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.7em;
+    }
+  }
+  
+  &__img {
+    width: 105px;
+    height: 105px;
+    background: center center no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+}
+
+.accordeon__item--active {
+  
+  .accordeon__name {
+    color: #f9b43b;
+  }
+
+  .accordeon__name:before {
+    content: "";
+    display: inline-block;
+    border: 8px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-bottom-color: #f7b33b;
+    border-top-width: 0px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    margin-right: 10px;
+  }
+
+  .accordeon__content {
+    height: 110px;
+  }
+}
+
+

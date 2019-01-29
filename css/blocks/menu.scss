@@ -1,0 +1,37 @@
+.mainmenu {
+	background: url('../images/menu_bg.jpg') 50% no-repeat;
+	background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.mainmenu__title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #fff;
+}
+
+.menu-acco {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  &__item {
+    width: 10%;
+  }
+
+  &__text{
+    font-family: "gagalinregular";
+    font-size: 40px;
+    transform: rotate(-90deg);
+  }
+
+  &__content {
+    width: 0px;
+    overflow: hidden;
+  }
+}

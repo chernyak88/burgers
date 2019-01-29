@@ -16,7 +16,8 @@
 .reviews__item {
   width: 25%;
   height: 50%;
-  background: center center / cover no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   filter: grayscale(100%);
 
