@@ -1,0 +1,82 @@
+.contacts {
+  background: url('../images/map.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.footer {
+  background: url('../images/footer_bg.jpg') center bottom no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  height: 60px;
+}
+
+.footer__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.footer__col {
+  width: 50%;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.footer__address {
+  color: #fff;
+  font-size: 14px;
+  line-height: 0.9rem;
+  margin-bottom:5px;
+}
+
+.footer__phone-icon{
+  margin-right:8px;
+  margin-left: 0.1rem;
+  width:12px;
+  height: 12px;
+}
+
+.footer__phone-link {
+  font-weight: bold;
+  color: $red;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer__col_right {
+  text-align: right;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.socials {
+  position: relative;
+  top: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.socials__item {
+  margin-left: 12px;
+}
+
+.socials__link {
+  display: inline-block;
+  max-width: 23px;
+  max-height: 20px;
+  opacity: .3;
+  transition: .3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.socials__link-icon {
+  width: 20px;
+  height: 20px;
+}

@@ -345,12 +345,89 @@
                   <div class="form__row">
                     <label for="" class="form__block">
                       <div class="form__block-title">Комментарий</div>
-                      <textarea class="form__block-input"></textarea>
+                      <textarea class="form__block-input textarea"></textarea>
                     </label>
                   </div>
-                </div>
+                  <div class="form__buttons">
+                    <div class="form__row">
+                      <label class="form__radio">
+                        <input type="radio" name="payment" class="form__radio-elem">
+                        <div class="form__radio-fake"></div>
+                        <div class="form__radio-title">Потребуется сдача</div>
+                      </label>
+                      <label class="form__radio">
+                        <input type="radio" name="payment" class="form__radio-elem">
+                        <div class="form__radio-fake"></div>
+                        <div class="form__radio-title">Оплата по карте</div>
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label class="form__radio form__radio-checkbox">
+                        <input type="checkbox" class="form__radio-elem" name="callback">
+                        <div class="form__radio-fake">
+                          <span class="checkmark">
+                            <div class="checkmark__stem"></div>
+                            <div class="checkmark__kick"></div>
+                          </span>
+                        </div>
+                          <div class="form__radio-title">Не перезванивать</div>
+                    </label>
+                    </div>
+                    <div class="form__row">
+                      <input type="submit" class="btn form__btn" value="Заказать">
+                      <input type="reset" class="btn form__btn-reset" value="Очистить">
+                    </div>
+                  </div>
+              </div>
             </form>
           </div>
+        </section>
+        <section class="section contacts">
+          <footer class="footer">
+            <div class="container footer__container">
+              <div class="footer__col">
+                <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                <div class="footer__phone">
+                  <svg class="footer__phone-icon" style="fill:#e45028;">
+                    <use xlink:href="./images/sprite.svg#phone"></use>
+                  </svg>
+                  <a class="footer__phone-link" href="tel:+78123771377">+7 (812) 377-13-77</a>
+                </div>
+              </div>
+              <div class="footer__col footer__col_right">
+                <ul class="socials">
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="socials__link-icon" style="fill: #fff">
+                        <use xlink:href="./images/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="socials__link-icon" style="fill: #fff">
+                        <use xlink:href="./images/sprite.svg#fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="socials__link-icon" style="fill: #fff">
+                        <use xlink:href="./images/sprite.svg#inst"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="socials__link-icon" style="fill: #fff">
+                        <use xlink:href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </footer>
         </section>
       </div>
       <nav class="fixed-menu">

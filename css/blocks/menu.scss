@@ -22,12 +22,15 @@
 
   &__item {
     width: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__text{
     font-family: "gagalinregular";
     font-size: 40px;
     transform: rotate(-90deg);
+    transform-origin: 0 0;
   }
 
   &__content {
