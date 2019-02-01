@@ -2,13 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: .63rem;
+}
+
+.logo__icon {
+  width: 6.25rem;
+  height: 4.69rem;
 }
 
 .header__buttons {
   display: flex;
   align-items: center;
-  font-size: 13px;
+  font-size: .81rem;
 }
 
 .menu__list {
@@ -28,12 +33,12 @@
   }
   &:after {
     content: "";
-    width: 4px;
-    height: 4px;
+    width: .25rem;
+    height: .25rem;
     border-radius: 50%;
     display: inline-block;
     background: #fff;
-    margin: 0 15px;
+    margin: 0 1rem;
   }
 }
 

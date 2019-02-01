@@ -9,7 +9,7 @@
 }
 
 .hero__order-btn {
-  margin-left: 15px;
+  margin-left: 1rem;
 }
 
 .hero__content {
@@ -21,12 +21,16 @@
 }
 
 .hero__content-img {
-  margin-right: 15px;
+  margin-right: 1rem;
+}
+
+.hero__burger-img {
+  max-width: 100%;
 }
 
 .hero__content-desc {
   font-family: "lifehackmedium";
-  font-size: 55px;
+  font-size: 3.44rem;
   color: #fff;
 }
 
@@ -34,4 +38,9 @@
   position: absolute;
   left: 50%;
   bottom: 5%;
+
+  &__icon {
+    width: 2.19rem;
+    height: 1.25rem;
+  }
 }

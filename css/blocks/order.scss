@@ -3,13 +3,13 @@
 }
 
 .form {
-  font-size: 14px;
+  font-size: .88rem;
   font-weight: 300;
   color: #fff;
   display: flex;
 
   &__left {
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
 }
 
@@ -19,11 +19,11 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .form__block {
-  margin-right: 20px;
+  margin-right: 1.25rem;
   flex: 1;
 
   &:last-child {
@@ -36,16 +36,16 @@
   background: #fff;
   border: none;
   width: 100%;
-  height: 35px;
-  padding: 5px 10px;
+  height: 2.19rem;
+  padding: .31rem .63rem;
 }
 
 .form__block-title {
-  margin-bottom: 5px;
+  margin-bottom: .31rem;
 }
 
 .textarea {
-  height: 110px;
+  height: 6.88rem;
   resize: none;
 }
 

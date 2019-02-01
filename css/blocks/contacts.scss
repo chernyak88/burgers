@@ -11,8 +11,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px 0;
-  height: 60px;
+  padding: .63rem 0;
+  height: 3.75rem;
 }
 
 .footer__container {
@@ -29,19 +29,20 @@
   color: #fff;
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: .88rem;
 }
 
 .footer__phone-icon{
-  margin-right: 6px;
-  width:12px;
-  height: 12px;
+  fill:#e45028;
+  margin-right: .38rem;
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 .footer__phone-link {
   font-weight: bold;
   text-decoration: none;
-  font-size: 14px;
+  font-size: .88rem;
   color: $red;
 }
 
@@ -59,7 +60,7 @@
 }
 
 .socials__item {
-  margin-right: 20px;
+  margin-right: 1.25rem;
 
   &:last-child {
     margin-right: 0;
@@ -68,12 +69,18 @@
 
 .socials__link {
   display: inline-block;
-  max-width: 23px;
-  max-height: 20px;
+  max-width: 1.48rem;
+  max-height: 1.25rem;
   opacity: .3;
   transition: .3s;
   
   &:hover {
     opacity: 1;
+  }
+
+  &-icon {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
   }
 }
