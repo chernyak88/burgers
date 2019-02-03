@@ -16,6 +16,7 @@
 .reviews__item {
   width: 25%;
   height: 50%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -25,6 +26,11 @@
     .reviews__item-hover {
       opacity: 1;
     }
+  }
+
+  @include tablets {
+    width: 50%;
+    height: 25%;
   }
 }
 
@@ -45,10 +51,46 @@
   h3 {
     font-family: "gagalinregular";
     margin-bottom: 1.88rem;
+
+    @include tablets {
+      margin-bottom: 1.25rem;
+    }
+    
+    @include phones {
+      font-size: 24px;
+      line-height: 1.2em;
+    }
   }
 
   p {
     font-weight: 300;
     margin-bottom: 1.25rem;
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    text-align: center;
+    padding: 1.87rem 3.13rem;
+
+    @include phones {
+      padding: 20% 10%;
+    }
+  }
+}
+
+.reviews__btn {
+  @include phones {
+    display: none;
+  }
+}
+
+.reviews__btn--phone {
+  display: none;
+
+  @include phones {
+    display: block;
   }
 }

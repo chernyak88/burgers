@@ -12,17 +12,33 @@
   left: 0;
   right: 0;
   padding: .63rem 0;
-  height: 3.75rem;
+  min-height: 3.75rem;
 }
 
 .footer__container {
   height: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
+
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .footer__col {
   width: 50%;
+
+  @include phones {
+    width: 100%;
+ }
+}
+
+.footer__col_left {
+  @include phones {
+    margin-bottom: 1rem;
+ }
 }
 
 .footer__address {
@@ -50,6 +66,10 @@
   text-align: right;
   display: flex;
   justify-content: flex-end;
+
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .socials {

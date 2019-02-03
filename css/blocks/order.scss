@@ -1,63 +1,225 @@
 .order {
-  background: url('../images/order_bg.jpg') center center no-repeat / cover;
+  background: url("../images/order_bg.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.form {
-  font-size: .88rem;
-  font-weight: 300;
-  color: #fff;
+.order__form {
+  margin-left: -5%;
   display: flex;
 
-  &__left {
-    margin-right: 1.25rem;
+  @include tablets {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
   }
 }
 
-.form__left, .form__right {
-  width: 50%;
+.order__form-col {
+  width: 45%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+      width: 70%;
+  }
+  @include phones {
+      width: 90%;
+  }
 }
 
-.form__row {
-  display: flex;
+.order__form-row {
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
 }
 
-.form__block {
-  margin-right: 1.25rem;
-  flex: 1;
+.order__form-text {
+  margin-bottom: .44rem;
+  font-weight: 300;
+  color:#fff;
+  font-size: .88rem;
+}
 
-  &:last-child {
-    margin-right: 0;
+.order__form-input {
+  font-size: .88rem;
+  padding: .31rem .63rem;
+  border: 1px solid #d1cfcb;
+  border-radius: .31rem;
+  width: 100%;
+}
+
+.order__form-block {
+  width: 100%;
+  margin-right: .63rem;
+}
+
+.order__form-block--floor {
+  @include phones{
+    display: none;
+}
+}
+
+.order__form-row {
+  display: flex;
+  margin-left: -0.63rem;
+
+  @include phones{
+      justify-content: center;
   }
 }
 
-.form__block-input {
-  border-radius: 5px;
-  background: #fff;
-  border: none;
-  width: 100%;
-  height: 2.19rem;
-  padding: .31rem .63rem;
-}
-
-.form__block-title {
-  margin-bottom: .31rem;
-}
-
-.textarea {
-  height: 6.88rem;
+.order__form-input_textarea {
+  height: 6.2rem;
   resize: none;
 }
 
-.form__btn {
-  border: none;
+.order__radio {
+  white-space: nowrap;
+  margin-right: 1.25rem;
   cursor: pointer;
+  display: flex;
 
-  &-reset {
-    padding-left: 0;
-    padding-right: 0;
-    text-transform: none;
-    background: transparent;
-    margin-left: 3%;
+  @include phones {
+      margin-bottom: 1.25rem;
+  }
+}
+
+.order__radio-elem {
+  visibility: hidden;
+}
+
+.order__radio-fake {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background:#fff;
+  position: relative;
+
+  &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      top: 50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      background-color: #e35028;
+  }
+}
+
+.order__radio-elem:checked {
+  &+.order__radio-fake {
+      &:after {
+        display: block;
+      }
+  }
+}
+
+.order__radio_checkbox {
+    .order__radio-elem:checked {
+      &+.order__radio-fake {
+          .checkmark {
+            display: none;
+          }
+      }
+  }
+}
+
+.order__radio-title {
+  font-size: .88rem;
+  color:#fff;
+  margin-left: .63rem;
+  font-weight: 300;
+}
+
+.order__radio_checkbox {
+  .order__radio-fake {
+      border-radius: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .order__radio-elem {
+      &+.order__radio-fake {
+          &:after {
+            background:transparent;
+          }
+      }
+  }
+}
+
+.order__radio_chekbox {
+  .order__radio-elem:checked {
+    .checkmark {
+      display: inline-flex;
+    } 
+  }
+}
+
+.order__form-buttons {
+  display:flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  margin-left:-3%;
+}
+
+.order__form-button {
+  margin-left:3%;
+  cursor: pointer;
+}
+
+.order__form-button-reset {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 3%;
+  cursor: pointer;
+  text-transform: none;
+  background: transparent;
+  &:hover {
+    background:transparent;
+  }
+}
+
+.checkmark {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    position: relative;
+    margin-left: -5px;
+    margin-top: 2px;
+    
+    @include tablets {
+      margin-left: -7px;
+      margin-top: 4px;
+    }
+    
+    @include phones {
+      margin-left: -7px;
+      margin-top: 3px;
+    }
+
+  .checkmark__stem {
+    position: absolute;
+    width: 4px;
+    height: 10px;
+    background-color: $orange;
+    left: 11px;
+    top: 6px;
+  }
+
+  .checkmark__kick {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: $orange;
+    left: 8px;
+    top: 12px;
   }
 }

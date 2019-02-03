@@ -16,6 +16,16 @@
   font-size: .81rem;
 }
 
+.menu {
+  flex: 1;
+  text-align: right;
+  margin-right: rem(20px);
+
+  @include tablets {
+    display: none;
+  }
+}
+
 .menu__list {
   display: flex;
   align-items: center;
@@ -45,4 +55,9 @@
 .menu__link {
   color: #fff;
   text-decoration: none;
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
 }

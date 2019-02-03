@@ -1,5 +1,5 @@
 .team {
-  background: url('../images/team_bg.jpg') no-repeat;
+  background: url('../images/team_bg.jpg') center center no-repeat;
   background-size: cover;
   position: relative;
 
@@ -13,7 +13,22 @@
     padding: 5% 4% 0 8%;
     display: flex;
     flex-direction: column;
+
+    @include tablets {
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
+}
+
+.team__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .accordeon {
@@ -22,6 +37,7 @@
 
   &__name {
     font-family: "gagalinregular";
+    font-size: 24px;
     margin-bottom: 1rem;
     cursor: pointer;
   }
@@ -41,9 +57,16 @@
 
   &__content {
     display: flex;
-    margin-bottom: 1.88rem;
+    margin-bottom: 1rem;
     height: 0;
     overflow: hidden;
+
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__text {
@@ -55,17 +78,37 @@
     }
 
     p {
+      font-weight: 300;
       line-height: 1.7;
+    }
+
+    @include tablets {
+      width: 20.75rem;
+    }
+  }
+  
+  &__pic {
+    margin-right: 1.25rem;
+
+    @include tablets {
+      margin-right: 0;
+    }
+
+    @include phones {
+      margin-right: 0;
     }
   }
   
   &__img {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 100px;
+    height: 100px;
     background: center center no-repeat;
     background-size: cover;
     border-radius: 50%;
-    margin-right: 1.25rem;
+  }
+
+  @include tablets {
+    text-align: center;
   }
 }
 
@@ -89,8 +132,25 @@
   }
 
   .accordeon__content {
-    height: 6.88rem;
+    height: 8.4rem;
+
+    @include tablets {
+      height: 14.5rem;
+    }
+  }
+
+  .accordeon__img {
+    @include tablets {
+      margin-bottom: 1.55rem;
+    }
+  }
+
+  .accordeon__text {
+    @include tablets {
+      width: 21rem;
+    }
   }
 }
+
 
 
