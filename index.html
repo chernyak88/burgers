@@ -14,45 +14,42 @@
         <section class="section hero">
           <div class="container hero__container">
             <header class="header">
-              <div class="logo">
-                <svg class="logo__icon" viewBox="0 0 100 75">
-                  <use xlink:href="./images/sprite.svg#logo"></use>
-                </svg>
-              </div>
-              <div class="header__buttons">
-                <nav class="menu">
-                  <ul class="menu__list">
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">О нас</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Бургеры</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Команда</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Меню</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Отзывы</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Как мы работаем</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Контакты</a>
-                    </li>
-                  </ul>             
-                </nav>
-                <div class="header__links"> 
-                  <a href="#" class="btn hero__order-btn">Заказать</a>
-                  <a class="hamburger-menu-link" href="">
-                    <div class="hamburger-menu-link__bars"></div>
-                  </a>
+                <div class="header__logo">
+                  <a class="logo" href="#"><img class="logo__icon" src="./images/icons/logo.png"></a>
                 </div>
-              </div>
-            </header>
+                <div class="header__btns">
+                  <div class="header__menu">
+                    <nav class="nav">
+                      <ul class="nav__list">
+                        <li class="nav__item">
+                          <a class="nav__link" href="" data-scroll-to="1">о нас</a>
+                        </li>
+                        <li class="nav__item">
+                          <a class="nav__link" href="" data-scroll-to="2">бургеры</a>
+                        </li>
+                        <li class="nav__item">
+                          <a class="nav__link" href="" data-scroll-to="3">команда</a>
+                        </li>
+                        <li class="nav__item">
+                          <a class="nav__link" href="" data-scroll-to="4">меню</a>
+                        </li>
+                        <li class="nav__item">
+                          <a class="nav__link" href="" data-scroll-to="5">отзывы</a>
+                        </li>
+                        <li class="nav__item">
+                          <a class="nav__link" href="" data-scroll-to="7">контакты</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="header__links">
+                    <a class="order-link btn" href="" data-scroll-to="6">Заказать</a>
+                    <a class="hamburger-menu-link" href="">
+                      <div class="hamburger-menu-link__bars"></div>
+                    </a>
+                  </div>
+                </div>
+              </header>
             <div class="hero__content">
               <div class="hero__content-img">
                 <img class="hero__burger-img" src="images/steam_burger.png" alt="Картинка бургера">
@@ -183,7 +180,7 @@
         <section class="section mainmenu">
           <div class="title mainmenu__title">Меню</div>
           <ul class="menu-acco">
-            <li class="menu-acco__item" style="background-image: url('./images/meat_bg.jpg')">
+            <li class="menu-acco__item menu-acco__item--active" style="background-image: url('./images/meat_bg.jpg')">
               <a href="#" class="menu-acco__trigger">
                 <span class="menu-acco__trigger-text">Для мясоедов</span> 
               </a>
@@ -357,35 +354,35 @@
         <section class="section section_centered order">
           <div class="container">
             <div class="title section__title">Закажите доставку</div>
-            <form action="" class="order__form_tag">
+            <form action="" method="get" class="order__form_tag">
               <div class="order__form">
-                <div class="order__form-col">
+                <div class="order__form-col order__form-col_left">
                   <div class="order__form-row">
-                    <label class="order__form-block">
+                    <label class="order__form-block order__form-block--margin">
                     <div class="order__form-text">Имя</div>
                       <input type="text" class="order__form-input" name="name">
-                  </label>
+                    </label>
                     <label class="order__form-block">
                     <div class="order__form-text">Телефон</div>
                       <input type="tel" class="order__form-input" name="phone" maxlength="11" placeholder="89212264923">
-                  </label>
+                    </label>
                   </div>
                   <div class="order__form-row">
                     <label class="order__form-block">
                     <div class="order__form-text">Улица</div>
                       <input type="text" class="order__form-input" name="street">
-                  </label>
+                    </label>
                   </div>
                   <div class="order__form-row">
-                    <label class="order__form-block">
+                    <label class="order__form-block order__form-block--margin">
                     <div class="order__form-text">Дом</div>
                       <input type="number" class="order__form-input" name="home">
                   </label>
-                    <label class="order__form-block">
+                    <label class="order__form-block order__form-block--margin">
                     <div class="order__form-text">Корпус</div>
                       <input type="text" class="order__form-input" name="part">
                   </label>
-                    <label class="order__form-block">
+                    <label class="order__form-block order__form-block--margin">
                     <div class="order__form-text">Квартира</div>
                       <input type="number" class="order__form-input" name="appt">
                   </label>
@@ -438,6 +435,9 @@
           </div>
         </section>
         <section class="section contacts">
+          <div class="map">
+            <img src="./images/map.jpg" alt="Карта" class="map__img">
+          </div>
           <footer class="footer">
             <div class="container footer__container">
               <div class="footer__col footer__col_left">

@@ -10,18 +10,20 @@
 .mainmenu__title {
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 5%;
   color: #fff;
   z-index: 10;
+  margin-bottom: 0;
+
+  @include phones {
+    z-index: 1;
+  }
 }
 
 .menu-acco {
-	position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
   display: flex;
   justify-content: flex-end;
+  z-index: 5;
 
   &__item {
     height: 100%;
@@ -29,6 +31,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    justify-content: flex-end;
   }
 
   &__item:hover {
