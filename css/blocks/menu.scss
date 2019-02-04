@@ -1,0 +1,99 @@
+.mainmenu {
+	background: url('../images/menu_bg.jpg') 50% no-repeat;
+	background-size: cover;
+  position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mainmenu__title {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: #fff;
+  z-index: 10;
+  margin-bottom: 0;
+
+  @include phones {
+    z-index: 1;
+  }
+}
+
+.menu-acco {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 5;
+
+  &__item {
+    height: 100%;
+    background-position: 89%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item:hover {
+    .menu-acco__trigger {
+      background-color: rgba(#2f3234, 0);
+      transition: .3s;
+    }
+  }
+
+  &__item--active {
+    .menu-acco__trigger {
+      background-color: rgba(#2f3234, .9);
+    }
+    
+    .menu-acco__trigger-text {
+      color: #f9b43b;
+    }
+
+    .menu-acco__content {
+      width: 50%;
+      max-width: 100%;
+    }
+
+    .menu-acco__text {
+      display: block;
+    }
+  }
+
+  &__trigger {
+    width: 5rem;
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+    background-color: rgba(#2f3234, .9);
+  }
+
+  &__trigger-text{
+    font-family: "gagalinregular";
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    white-space: nowrap;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
+    margin-top: -1.25rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    height: 100%;
+    background: rgba(#2f3234, .9);
+    width: 0;
+    overflow: hidden;
+  }
+
+  &__text {
+    font-size: .88rem;
+    padding: 3.75rem 1.88rem;
+    display: none;
+  }
+}

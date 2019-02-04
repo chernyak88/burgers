@@ -16,7 +16,9 @@
 .reviews__item {
   width: 25%;
   height: 50%;
-  background: center center / cover no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   filter: grayscale(100%);
 
@@ -24,6 +26,11 @@
     .reviews__item-hover {
       opacity: 1;
     }
+  }
+
+  @include tablets {
+    width: 50%;
+    height: 25%;
   }
 }
 
@@ -34,20 +41,60 @@
   right: 0;
   bottom: 0;
   background: rgba(#000, .5);
-  padding: 10px;
+  padding: 0.63rem;
   color: #fff;
   opacity: 0;
   transition: opacity .3s;
-  padding: 50px 20px;
-  font-size: 14px;
+  padding: 3.13rem 1.25rem;
+  font-size: .88rem;
 
   h3 {
     font-family: "gagalinregular";
-    margin-bottom: 30px;
+    margin-bottom: 1.88rem;
+
+    @include tablets {
+      margin-bottom: .4rem;
+    }
+    
+    @include phones {
+      font-size: 24px;
+      line-height: 1.2em;
+    }
   }
 
   p {
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
+
+    @include tablets {
+      margin-bottom: .8rem;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    text-align: center;
+    padding: 1.3rem 1.8rem;
+
+    @include phones {
+      padding: 20% 10%;
+    }
+  }
+}
+
+.reviews__btn {
+  @include phones {
+    display: none;
+  }
+}
+
+.reviews__btn--phone {
+  display: none;
+
+  @include phones {
+    display: block;
   }
 }

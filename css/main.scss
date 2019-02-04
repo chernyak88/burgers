@@ -4,11 +4,17 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//media
+@import "layout/media.scss";
+
 //normalize
 @import "layout/normalize.scss";
 
 //setups
-@import "layout/mixins.scss";
 @import "layout/fonts.scss";
 @import "layout/base.scss";
 
@@ -16,8 +22,12 @@ $red: #e35028;
 @import "./blocks/header.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/btn.scss";
+@import "./blocks/hamburger-menu.scss";
 @import "./blocks/title.scss";
 @import "./blocks/best.scss";
+@import "./blocks/team.scss";
+@import "./blocks/menu.scss";
 @import "./blocks/reviews.scss";
 @import "./blocks/order.scss";
+@import "./blocks/contacts.scss";
 @import "./blocks/fixed-menu.scss";
