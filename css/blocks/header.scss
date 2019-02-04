@@ -26,36 +26,20 @@
   }
 }
 
-.logo {
-	display: inline-block;
-	position: relative;
-	z-index: 110;
-
-	svg {
-		max-width: 95%;
-	}
-}
-
-.logo__img {
-	height: 4.7rem;
-}
-
-.logo__icon {
-	path:nth-child(1) {
-		fill: #e45028;
-	}
+.header__logo-icon {
+	width: 6.25rem;
+  height: 4.69rem;
 }
 
 .nav__list {
 	width: 100%;
-  display: flex;
+	display: flex;
   align-items: center;
 }
 
 .nav__item {
   display: flex;
 	align-items: center;
-	white-space: nowrap;
 
 	&:last-child {
     margin-right: 0;
