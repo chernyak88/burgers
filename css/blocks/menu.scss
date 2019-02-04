@@ -12,19 +12,21 @@
   top: 10%;
   left: 5%;
   color: #fff;
-  z-index: 10;
   margin-bottom: 0;
 
+  @include tablets {
+    opacity: 0.3;
+  }
+
   @include phones {
-    z-index: 1;
+    opacity: 0.3;
   }
 }
 
 .menu-acco {
   display: flex;
   justify-content: flex-end;
-  z-index: 5;
-
+  
   &__item {
     height: 100%;
     background-position: 89%;
