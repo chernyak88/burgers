@@ -24,25 +24,25 @@
                     <nav class="nav">
                       <ul class="nav__list">
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="1">о нас</a>
+                          <a class="nav__link" href="" data-scroll-to="">о нас</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="2">бургеры</a>
+                          <a class="nav__link" href="" data-scroll-to="">бургеры</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="3">команда</a>
+                          <a class="nav__link" href="" data-scroll-to="">команда</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="4">меню</a>
+                          <a class="nav__link" href="" data-scroll-to="">меню</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="5">отзывы</a>
+                          <a class="nav__link" href="" data-scroll-to="">отзывы</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="6">как мы работаем</a>
+                          <a class="nav__link" href="" data-scroll-to="">как мы работаем</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="8">контакты</a>
+                          <a class="nav__link" href="" data-scroll-to="">контакты</a>
                         </li>
                       </ul>
                     </nav>
@@ -115,6 +115,175 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="section burgers">
+          <div class="container container__burgers">
+            <div class="slider">
+              <div class="slider__col slider__col-left">
+                <div class="slider__composition">
+                  <svg class="slider__burger-icon" viewBox="0 0 45 45">
+                    <use xlink:href="./images/sprite.svg#burger"></use>
+                  </svg>
+                  Состав
+                  <div class="composition__hover">
+                    <ul class="hover__list">
+                      <li class="hover__item">
+                        <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                          <use xlink:href="./images/sprite.svg#beef"></use>
+                        </svg>
+                        <div class="hover__component">Говядина</div>
+                        <div class="hover__weigth">300г</div>
+                      </li>
+                      <li class="hover__item">
+                        <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                          <use xlink:href="./images/sprite.svg#buns"></use>
+                        </svg>
+                        <div class="hover__component">Булочки</div>
+                        <div class="hover__weigth">100г</div>
+                      </li>
+                      <li class="hover__item">
+                        <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#8ac03e;">
+                          <use xlink:href="./images/sprite.svg#salad"></use>
+                        </svg>
+                        <div class="hover__component">Зелень</div>
+                        <div class="hover__weigth">70г</div>
+                      </li>
+                      <li class="hover__item">
+                        <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                          <use xlink:href="./images/sprite.svg#sauce"></use>
+                        </svg>
+                        <div class="hover__component">Соус</div>
+                        <div class="hover__weigth">150г</div>
+                      </li>
+                      <li class="hover__item">
+                        <svg class="hover__icon" viewBox="0 0 45 40">
+                          <use xlink:href="images/sprite.svg#cucumber"></use>
+                        </svg>
+                        <div class="hover__component">Овощи</div>
+                        <div class="hover__weigth">200г</div>
+                      </li>
+                      <li class="hover__item">
+                        <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                          <use xlink:href="images/sprite.svg#cheese"></use>
+                        </svg>
+                        <div class="hover__component">Сыр</div>
+                        <div class="hover__weigth">80г</div>
+                      </li>
+                    </ul>
+                    <div class="hover__close"></div>
+                  </div>
+                </div>
+                <div class="slider__display">
+                  <ul class="slider__list">
+                    <li class="slider__item active">
+                      <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/black_burger.png" alt=""></div>
+                    </li>
+                    <li class="slider__item">
+                      <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/bacon_cheeseburger.png" alt=""></div>
+                    </li>
+                    <li class="slider__item">
+                      <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/burger_sandwitch.png" alt=""></div>
+                    </li>
+                    <li class="slider__item">
+                      <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/chicken_burger.png" alt=""></div>
+                    </li>
+                    <li class="slider__item">
+                      <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/spicy_shrimp_burger.png" alt=""></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="slider__calories">
+                  <div class="slider__calories-picture">
+                    <svg class="slider__calories-icon" viewBox="0 0 60 60" style="fill:#fff;">
+                      <use xlink:href="images/sprite.svg#kkal"></use>
+                    </svg>
+                    <span class="slider__calories-number">1200</span>
+                  </div>
+                  ккал
+                </div>
+              </div>
+              <div class="slider__col slider__col-right">
+                <ul class="desc__list">
+                  <li class="desc__item active">
+                    <div class="title title_burgers">
+                      Dark Beef Burger
+                    </div>
+                    <div class="slider__text">
+                      <p>
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="desc__item">
+                    <div class="section__title section__title_white section__title_burgers">
+                      NYC Bacon Cheeseburger
+                    </div>
+                    <div class="slider__text">
+                      <p>
+                        Живая легенда! Американская классика! Белая булочка с кунжутом, говяжья котлета, расплавленный сыр чеддер,
+                        помидор, салат и двойная порция хрустящего поджаренного бекона не оставят вас равнодушным.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="desc__item">
+                    <div class="section__title section__title_white section__title_burgers">
+                      Burger Sandwitch
+                    </div>
+                    <div class="slider__text">
+                      <p>
+                        Представляем вам новинку — Бургер-Сэндвич, вобравший в себя всё лучшее от своих родителей. Обжаренная в специях куриная грудка, фирменный белый соус, овощи, зелень и три полоски бекона-гриль.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="desc__item">
+                    <div class="section__title section__title_white section__title_burgers">
+                      Chicken Burger
+                    </div>
+                    <div class="slider__text">
+                      <p>
+                        Старый друг лучше новых двух! Классический чикен бургер, с большой сочной куриной котлетой, свежим салатом-айсберг, помидором, луком и сыром. Все то, что вы неизменно любите! И ничего лишнего!
+                      </p>
+                    </div>
+                  </li>
+                  <li class="desc__item">
+                    <div class="section__title section__title_white section__title_burgers">
+                      Spicy Shrimp Burger
+                    </div>
+                    <div class="slider__text">
+                      <p>
+                        Для любителей морепродкутов и остренького! Королевские креветки в острой панировке, дальневосточные кальмары, фиолетовый лук, салат-айсберг, сыр чеддер, и всё это под фирменным тайским соусом с добавлением красного перца.
+                      </p>
+                    </div>
+                  </li>
+                </ul> 
+                <div class="slider__bottom">
+                  <div class="slider__price">
+                    <ul class="price__list">
+                      <li class="price__item active"><span class="slider__price-number">500</span> рублей</li>
+                      <li class="price__item"><span class="slider__price-number">400</span> рублей</li>
+                      <li class="price__item"><span class="slider__price-number">450</span> рублей</li>
+                      <li class="price__item"><span class="slider__price-number">350</span> рублей</li>
+                      <li class="price__item"><span class="slider__price-number">490</span> рублей</li>
+                    </ul> 
+                  </div>
+                  <a href="#" class="btn slider__btn" data-scroll-to="">
+                  Заказать
+                </a>
+                </div>
+              </div>
+              <a class="slider__prev-arrow" href="#">
+                <svg class="next-screen-arrow__icon">
+                  <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
+                </svg>
+              </a>
+              <a class="slider__next-arrow" href="#">
+                <svg class="next-screen-arrow__icon">
+                  <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
+                </svg>
+              </a> 
+            </div>
           </div>
         </section>
         <section class="section team">
@@ -520,7 +689,27 @@
               <a class="fixed-menu__link" href="#"></a>
           </li>
         </ul>
-      </nav>  
+      </nav>
+      <div class="popup-menu">
+        <div class="popup-menu__wrapper">
+          <div class="popup-menu__logo">
+            <a href="index.html">
+              <img class="popup-menu__img" src="./images/icons/logo.png" alt="Mr. Burger">
+            </a>
+          </div>
+          <div class="popup-menu__close"></div>
+          <nav class="nav">
+            <ul class="popup-menu__list">
+              <li class="popup-menu__item" data-scroll-to="">О нас</li>
+              <li class="popup-menu__item" data-scroll-to="">Бургеры</li>
+              <li class="popup-menu__item" data-scroll-to="">Команда</li>
+              <li class="popup-menu__item" data-scroll-to="">Меню</li>
+              <li class="popup-menu__item" data-scroll-to="">Отзывы</li>
+              <li class="popup-menu__item" data-scroll-to="">Контакты</li>
+            </ul>
+          </nav>
+        </div>
+      </div>  
   </div>
 </body>
 </html>
