@@ -7,6 +7,7 @@
     <title>Mr. Burger</title>
     <link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
+    
   </head>
 <body>
   <div class="wrapper">
@@ -49,9 +50,9 @@
                   </div>
                   <div class="header__links">
                     <a class="order-link btn" href="" data-scroll-to="7">Заказать</a>
-                    <a class="hamburger-menu-link" href="">
+                    <div class="hamburger-menu-link" href="" id="modal">
                       <div class="hamburger-menu-link__bars"></div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </header>
@@ -217,43 +218,46 @@
                     </div>
                   </li>
                   <li class="desc__item">
-                    <div class="section__title section__title_white section__title_burgers">
-                      NYC Bacon Cheeseburger
+                    <div class="title title_burgers">
+                      Dark Beef Burger
                     </div>
                     <div class="slider__text">
                       <p>
-                        Живая легенда! Американская классика! Белая булочка с кунжутом, говяжья котлета, расплавленный сыр чеддер,
-                        помидор, салат и двойная порция хрустящего поджаренного бекона не оставят вас равнодушным.
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
                       </p>
                     </div>
                   </li>
                   <li class="desc__item">
-                    <div class="section__title section__title_white section__title_burgers">
-                      Burger Sandwitch
+                    <div class="title title_burgers">
+                      Dark Beef Burger
                     </div>
                     <div class="slider__text">
                       <p>
-                        Представляем вам новинку — Бургер-Сэндвич, вобравший в себя всё лучшее от своих родителей. Обжаренная в специях куриная грудка, фирменный белый соус, овощи, зелень и три полоски бекона-гриль.
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
                       </p>
                     </div>
                   </li>
                   <li class="desc__item">
-                    <div class="section__title section__title_white section__title_burgers">
-                      Chicken Burger
+                    <div class="title title_burgers">
+                      Dark Beef Burger
                     </div>
                     <div class="slider__text">
                       <p>
-                        Старый друг лучше новых двух! Классический чикен бургер, с большой сочной куриной котлетой, свежим салатом-айсберг, помидором, луком и сыром. Все то, что вы неизменно любите! И ничего лишнего!
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
                       </p>
                     </div>
                   </li>
                   <li class="desc__item">
-                    <div class="section__title section__title_white section__title_burgers">
-                      Spicy Shrimp Burger
+                    <div class="title title_burgers">
+                      Dark Beef Burger
                     </div>
                     <div class="slider__text">
                       <p>
-                        Для любителей морепродкутов и остренького! Королевские креветки в острой панировке, дальневосточные кальмары, фиолетовый лук, салат-айсберг, сыр чеддер, и всё это под фирменным тайским соусом с добавлением красного перца.
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
                       </p>
                     </div>
                   </li>
@@ -262,10 +266,10 @@
                   <div class="slider__price">
                     <ul class="price__list">
                       <li class="price__item active"><span class="slider__price-number">500</span> рублей</li>
-                      <li class="price__item"><span class="slider__price-number">400</span> рублей</li>
-                      <li class="price__item"><span class="slider__price-number">450</span> рублей</li>
-                      <li class="price__item"><span class="slider__price-number">350</span> рублей</li>
-                      <li class="price__item"><span class="slider__price-number">490</span> рублей</li>
+                      <li class="price__item"><span class="slider__price-number">500</span> рублей</li>
+                      <li class="price__item"><span class="slider__price-number">500</span> рублей</li>
+                      <li class="price__item"><span class="slider__price-number">500</span> рублей</li>
+                      <li class="price__item"><span class="slider__price-number">500</span> рублей</li>
                     </ul> 
                   </div>
                   <a href="#" class="btn slider__btn" data-scroll-to="">
@@ -273,8 +277,10 @@
                 </a>
                 </div>
               </div>
-              <a class="slider__prev-arrow" href="#">
-                <svg class="next-screen-arrow__icon">
+              
+            </div>
+            <a class="slider__prev-arrow" href="#">
+                <svg class="prev-screen-arrow__icon">
                   <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
                 </svg>
               </a>
@@ -283,7 +289,6 @@
                   <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
                 </svg>
               </a> 
-            </div>
           </div>
         </section>
         <section class="section team">
@@ -305,7 +310,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordeon__item accordeon__item--active">
+                <li class="accordeon__item">
                   <div class="accordeon__name">Ричард Джеймс</div>
                   <div class="accordeon__content">
                     <div class="accordeon__pic">
@@ -354,7 +359,7 @@
         <section class="section mainmenu">
           <div class="title mainmenu__title">Меню</div>
           <ul class="menu-acco">
-            <li class="menu-acco__item menu-acco__item--active" style="background-image: url('./images/meat_bg.jpg')">
+            <li class="menu-acco__item" style="background-image: url('./images/meat_bg.jpg')">
               <a href="#" class="menu-acco__trigger">
                 <span class="menu-acco__trigger-text">Для мясоедов</span> 
               </a>
@@ -690,26 +695,29 @@
           </li>
         </ul>
       </nav>
-      <div class="popup-menu">
-        <div class="popup-menu__wrapper">
-          <div class="popup-menu__logo">
+      <script type="template" id="modal-template">
+        <div class="overlay">
+          <div class="popup__logo">
             <a href="index.html">
-              <img class="popup-menu__img" src="./images/icons/logo.png" alt="Mr. Burger">
+              <svg class="popup__img" viewBox="0 0 100 75">
+                <use xlink:href="./images/sprite.svg#logo"></use>
+              </svg>
             </a>
           </div>
-          <div class="popup-menu__close"></div>
+          <a href="#" class="popup__close"></a>
           <nav class="nav">
-            <ul class="popup-menu__list">
-              <li class="popup-menu__item" data-scroll-to="">О нас</li>
-              <li class="popup-menu__item" data-scroll-to="">Бургеры</li>
-              <li class="popup-menu__item" data-scroll-to="">Команда</li>
-              <li class="popup-menu__item" data-scroll-to="">Меню</li>
-              <li class="popup-menu__item" data-scroll-to="">Отзывы</li>
-              <li class="popup-menu__item" data-scroll-to="">Контакты</li>
+            <ul class="popup__list">
+              <li class="popup__item" data-scroll-to="">О нас</li>
+              <li class="popup__item" data-scroll-to="">Бургеры</li>
+              <li class="popup__item" data-scroll-to="">Команда</li>
+              <li class="popup__item" data-scroll-to="">Меню</li>
+              <li class="popup__item" data-scroll-to="">Отзывы</li>
+              <li class="popup__item" data-scroll-to="">Контакты</li>
             </ul>
           </nav>
         </div>
-      </div>  
+    </script>  
   </div>
+<script src="./js/modal.js"></script>
 </body>
 </html>

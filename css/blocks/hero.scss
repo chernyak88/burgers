@@ -59,6 +59,10 @@
   position: absolute;
   left: 50%;
   bottom: 5%;
+  transition: .3s;
+  &:hover {
+    transform: translateY(5px);
+  } 
 
   &__icon {
     width: 2.19rem;

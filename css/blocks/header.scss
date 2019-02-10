@@ -70,3 +70,16 @@
 		text-decoration: underline;
 	}
 }
+
+.order-link {
+	@include tablets{
+		position: absolute;
+		top: 4%;
+		right: 10%;
+	}
+	@include phones{
+		position: absolute;
+		top: 4%;
+		right: 10%;
+	}
+}
