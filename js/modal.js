@@ -1,5 +1,3 @@
-window.onload = function() {
-
 ////////////////// бургер-меню
 
 const hamBtn  = document.querySelector('#modal');
@@ -62,7 +60,7 @@ acco.addEventListener('click', function(e) {
   }
 });
 
-for (let i = 0; accoItemLength; i++) {
+for (let i = 0; i < accoItemLength; i++) {
   accoItem[i].addEventListener('click', function(e) {
     e.stopPropagation();
     e.preventDefault();
@@ -77,8 +75,6 @@ for (let i = 0; accoItemLength; i++) {
     }
   });
 }
-
-};
 
 // calculateWidth()
 // узнать ширину окна

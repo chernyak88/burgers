@@ -15,4 +15,8 @@
   &_background_black:hover {
     background: #1f2122;
   }
+
+  &:focus {
+    outline: none;
+  }
 }

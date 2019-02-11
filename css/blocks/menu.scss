@@ -29,7 +29,7 @@
   
   &__item {
     height: 100%;
-    background-position: 89%;
+    
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -38,12 +38,13 @@
 
   &__item:hover {
     .menu-acco__trigger {
-      background-color: rgba(#2f3234, 0);
-      transition: .3s;
+      background-color: rgba(#2f3234, 0.7);
+      transition: .4s;
     }
   }
 
   &__item--active {
+    
     .menu-acco__trigger {
       background-color: rgba(#2f3234, .9);
     }
@@ -55,6 +56,11 @@
     .menu-acco__content {
       width: 50%;
       max-width: 100%;
+      transition: width .3s;
+
+      @include phones {
+        width: 70%;
+      }
     }
 
     .menu-acco__text {

@@ -59,13 +59,23 @@
   position: absolute;
   left: 50%;
   bottom: 5%;
-  transition: .3s;
+  animation: move .8s linear infinite alternate;
+
   &:hover {
-    transform: translateY(5px);
-  } 
+    animation-play-state: paused;
+  }
 
   &__icon {
     width: 2.19rem;
     height: 1.25rem;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(20px);
   }
 }

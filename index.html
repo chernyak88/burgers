@@ -121,163 +121,437 @@
         <section class="section burgers">
           <div class="container container__burgers">
             <ul class="slider">
-              <li class="slider__item">
-                  <div class="slider__col slider__col-left">
-                      <div class="slider__composition">
-                        <svg class="slider__burger-icon" viewBox="0 0 45 45">
-                          <use xlink:href="./images/sprite.svg#burger"></use>
-                        </svg>
-                        Состав
-                        <div class="composition__hover">
-                          <ul class="hover__list">
-                            <li class="hover__item">
-                              <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
-                                <use xlink:href="./images/sprite.svg#beef"></use>
-                              </svg>
-                              <div class="hover__component">Говядина</div>
-                              <div class="hover__weigth">300г</div>
-                            </li>
-                            <li class="hover__item">
-                              <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
-                                <use xlink:href="./images/sprite.svg#buns"></use>
-                              </svg>
-                              <div class="hover__component">Булочки</div>
-                              <div class="hover__weigth">100г</div>
-                            </li>
-                            <li class="hover__item">
-                              <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#8ac03e;">
-                                <use xlink:href="./images/sprite.svg#salad"></use>
-                              </svg>
-                              <div class="hover__component">Зелень</div>
-                              <div class="hover__weigth">70г</div>
-                            </li>
-                            <li class="hover__item">
-                              <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
-                                <use xlink:href="./images/sprite.svg#sauce"></use>
-                              </svg>
-                              <div class="hover__component">Соус</div>
-                              <div class="hover__weigth">150г</div>
-                            </li>
-                            <li class="hover__item">
-                              <svg class="hover__icon" viewBox="0 0 45 40">
-                                <use xlink:href="images/sprite.svg#cucumber"></use>
-                              </svg>
-                              <div class="hover__component">Овощи</div>
-                              <div class="hover__weigth">200г</div>
-                            </li>
-                            <li class="hover__item">
-                              <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
-                                <use xlink:href="images/sprite.svg#cheese"></use>
-                              </svg>
-                              <div class="hover__component">Сыр</div>
-                              <div class="hover__weigth">80г</div>
-                            </li>
-                          </ul>
-                          <div class="hover__close"></div>
-                        </div>
-                      </div>
-                      <div class="slider__display">
-                        <ul class="slider__list">
-                          <li class="slider__item">
-                            <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/black_burger.png" alt=""></div>
+              <li class="slider__item slider__item--active">
+                <div class="slider__col slider__col-left">
+                    <div class="slider__composition">
+                      <svg class="slider__burger-icon" viewBox="0 0 45 45">
+                        <use xlink:href="./images/sprite.svg#burger"></use>
+                      </svg>
+                      Состав
+                      <div class="composition__hover">
+                        <ul class="hover__list">
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#beef"></use>
+                            </svg>
+                            <div class="hover__component">Говядина</div>
+                            <div class="hover__weigth">300г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="./images/sprite.svg#buns"></use>
+                            </svg>
+                            <div class="hover__component">Булочки</div>
+                            <div class="hover__weigth">100г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#8ac03e;">
+                              <use xlink:href="./images/sprite.svg#salad"></use>
+                            </svg>
+                            <div class="hover__component">Зелень</div>
+                            <div class="hover__weigth">70г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#sauce"></use>
+                            </svg>
+                            <div class="hover__component">Соус</div>
+                            <div class="hover__weigth">150г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40">
+                              <use xlink:href="images/sprite.svg#cucumber"></use>
+                            </svg>
+                            <div class="hover__component">Овощи</div>
+                            <div class="hover__weigth">200г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="images/sprite.svg#cheese"></use>
+                            </svg>
+                            <div class="hover__component">Сыр</div>
+                            <div class="hover__weigth">80г</div>
                           </li>
                         </ul>
-                      </div>
-                      <div class="slider__calories">
-                        <div class="slider__calories-picture">
-                          <svg class="slider__calories-icon" viewBox="0 0 60 60" style="fill:#fff;">
-                            <use xlink:href="images/sprite.svg#kkal"></use>
-                          </svg>
-                          <span class="slider__calories-number">1200</span>
-                        </div>
-                        ккал
+                        <div class="hover__close"></div>
                       </div>
                     </div>
-                    <div class="slider__col slider__col-right">
-                      <ul class="desc__list">
-                        <li class="desc__item active">
-                          <div class="title title_burgers">
-                            Dark Beef Burger
-                          </div>
-                          <div class="slider__text">
-                            <p>
-                              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
-                              луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-                            </p>
-                          </div>
-                        </li>
-                        <li class="desc__item">
-                          <div class="title title_burgers">
-                            Dark Beef Burger
-                          </div>
-                          <div class="slider__text">
-                            <p>
-                              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
-                              луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-                            </p>
-                          </div>
-                        </li>
-                        <li class="desc__item">
-                          <div class="title title_burgers">
-                            Dark Beef Burger
-                          </div>
-                          <div class="slider__text">
-                            <p>
-                              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
-                              луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-                            </p>
-                          </div>
-                        </li>
-                        <li class="desc__item">
-                          <div class="title title_burgers">
-                            Dark Beef Burger
-                          </div>
-                          <div class="slider__text">
-                            <p>
-                              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
-                              луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-                            </p>
-                          </div>
-                        </li>
-                        <li class="desc__item">
-                          <div class="title title_burgers">
-                            Dark Beef Burger
-                          </div>
-                          <div class="slider__text">
-                            <p>
-                              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
-                              луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-                            </p>
-                          </div>
-                        </li>
-                      </ul> 
-                      <div class="slider__bottom">
-                        <div class="slider__price">
-                          <ul class="price__list">
-                            <li class="price__item active"><span class="slider__price-number">500</span> рублей</li>
-                            <li class="price__item"><span class="slider__price-number">500</span> рублей</li>
-                            <li class="price__item"><span class="slider__price-number">500</span> рублей</li>
-                            <li class="price__item"><span class="slider__price-number">500</span> рублей</li>
-                            <li class="price__item"><span class="slider__price-number">500</span> рублей</li>
-                          </ul> 
-                        </div>
-                        <button class="btn slider__btn">
-                          Заказать
-                        </button>
+                    <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/black_burger.png" alt=""></div>
+                    <div class="slider__calories">
+                      <div class="slider__calories-picture">
+                        <svg class="slider__calories-icon" viewBox="0 0 60 60" style="fill:#fff;">
+                          <use xlink:href="images/sprite.svg#kkal"></use>
+                        </svg>
+                        <span class="slider__calories-number">1200</span>
+                      </div>
+                      ккал
+                    </div>
+                  </div>
+                  <div class="slider__col slider__col-right">
+                    <div class="title title_burgers">
+                      Dark Beef Burger
+                    </div>
+                    <div class="slider__text">
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                    </div>
+                    <div class="slider__bottom">
+                      <div class="slider__price">
+                          <span class="slider__price-number">500</span> рублей                         
+                      </div>
+                      <button class="btn slider__btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider__col slider__col-left">
+                    <div class="slider__composition">
+                      <svg class="slider__burger-icon" viewBox="0 0 45 45">
+                        <use xlink:href="./images/sprite.svg#burger"></use>
+                      </svg>
+                      Состав
+                      <div class="composition__hover">
+                        <ul class="hover__list">
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#beef"></use>
+                            </svg>
+                            <div class="hover__component">Говядина</div>
+                            <div class="hover__weigth">300г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="./images/sprite.svg#buns"></use>
+                            </svg>
+                            <div class="hover__component">Булочки</div>
+                            <div class="hover__weigth">100г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#8ac03e;">
+                              <use xlink:href="./images/sprite.svg#salad"></use>
+                            </svg>
+                            <div class="hover__component">Зелень</div>
+                            <div class="hover__weigth">70г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#sauce"></use>
+                            </svg>
+                            <div class="hover__component">Соус</div>
+                            <div class="hover__weigth">150г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40">
+                              <use xlink:href="images/sprite.svg#cucumber"></use>
+                            </svg>
+                            <div class="hover__component">Овощи</div>
+                            <div class="hover__weigth">200г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="images/sprite.svg#cheese"></use>
+                            </svg>
+                            <div class="hover__component">Сыр</div>
+                            <div class="hover__weigth">80г</div>
+                          </li>
+                        </ul>
+                        <div class="hover__close"></div>
                       </div>
                     </div>
+                    <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/bacon_cheeseburger.png" alt=""></div>
+                    <div class="slider__calories">
+                      <div class="slider__calories-picture">
+                        <svg class="slider__calories-icon" viewBox="0 0 60 60" style="fill:#fff;">
+                          <use xlink:href="images/sprite.svg#kkal"></use>
+                        </svg>
+                        <span class="slider__calories-number">1200</span>
+                      </div>
+                      ккал
+                    </div>
+                  </div>
+                  <div class="slider__col slider__col-right">
+                    <div class="title title_burgers">
+                      Dark Beef Burger
+                    </div>
+                    <div class="slider__text">
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                    </div>
+                    <div class="slider__bottom">
+                      <div class="slider__price">
+                          <span class="slider__price-number">500</span> рублей                         
+                      </div>
+                      <button class="btn slider__btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider__col slider__col-left">
+                    <div class="slider__composition">
+                      <svg class="slider__burger-icon" viewBox="0 0 45 45">
+                        <use xlink:href="./images/sprite.svg#burger"></use>
+                      </svg>
+                      Состав
+                      <div class="composition__hover">
+                        <ul class="hover__list">
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#beef"></use>
+                            </svg>
+                            <div class="hover__component">Говядина</div>
+                            <div class="hover__weigth">300г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="./images/sprite.svg#buns"></use>
+                            </svg>
+                            <div class="hover__component">Булочки</div>
+                            <div class="hover__weigth">100г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#8ac03e;">
+                              <use xlink:href="./images/sprite.svg#salad"></use>
+                            </svg>
+                            <div class="hover__component">Зелень</div>
+                            <div class="hover__weigth">70г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#sauce"></use>
+                            </svg>
+                            <div class="hover__component">Соус</div>
+                            <div class="hover__weigth">150г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40">
+                              <use xlink:href="images/sprite.svg#cucumber"></use>
+                            </svg>
+                            <div class="hover__component">Овощи</div>
+                            <div class="hover__weigth">200г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="images/sprite.svg#cheese"></use>
+                            </svg>
+                            <div class="hover__component">Сыр</div>
+                            <div class="hover__weigth">80г</div>
+                          </li>
+                        </ul>
+                        <div class="hover__close"></div>
+                      </div>
+                    </div>
+                    <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/burger_sandwitch.png" alt=""></div>
+                    <div class="slider__calories">
+                      <div class="slider__calories-picture">
+                        <svg class="slider__calories-icon" viewBox="0 0 60 60" style="fill:#fff;">
+                          <use xlink:href="images/sprite.svg#kkal"></use>
+                        </svg>
+                        <span class="slider__calories-number">1200</span>
+                      </div>
+                      ккал
+                    </div>
+                  </div>
+                  <div class="slider__col slider__col-right">
+                    <div class="title title_burgers">
+                      Dark Beef Burger
+                    </div>
+                    <div class="slider__text">
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                    </div>
+                    <div class="slider__bottom">
+                      <div class="slider__price">
+                          <span class="slider__price-number">500</span> рублей                         
+                      </div>
+                      <button class="btn slider__btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider__col slider__col-left">
+                    <div class="slider__composition">
+                      <svg class="slider__burger-icon" viewBox="0 0 45 45">
+                        <use xlink:href="./images/sprite.svg#burger"></use>
+                      </svg>
+                      Состав
+                      <div class="composition__hover">
+                        <ul class="hover__list">
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#beef"></use>
+                            </svg>
+                            <div class="hover__component">Говядина</div>
+                            <div class="hover__weigth">300г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="./images/sprite.svg#buns"></use>
+                            </svg>
+                            <div class="hover__component">Булочки</div>
+                            <div class="hover__weigth">100г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#8ac03e;">
+                              <use xlink:href="./images/sprite.svg#salad"></use>
+                            </svg>
+                            <div class="hover__component">Зелень</div>
+                            <div class="hover__weigth">70г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#sauce"></use>
+                            </svg>
+                            <div class="hover__component">Соус</div>
+                            <div class="hover__weigth">150г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40">
+                              <use xlink:href="images/sprite.svg#cucumber"></use>
+                            </svg>
+                            <div class="hover__component">Овощи</div>
+                            <div class="hover__weigth">200г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="images/sprite.svg#cheese"></use>
+                            </svg>
+                            <div class="hover__component">Сыр</div>
+                            <div class="hover__weigth">80г</div>
+                          </li>
+                        </ul>
+                        <div class="hover__close"></div>
+                      </div>
+                    </div>
+                    <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/chicken_burger.png" alt=""></div>
+                    <div class="slider__calories">
+                      <div class="slider__calories-picture">
+                        <svg class="slider__calories-icon" viewBox="0 0 60 60" style="fill:#fff;">
+                          <use xlink:href="images/sprite.svg#kkal"></use>
+                        </svg>
+                        <span class="slider__calories-number">1200</span>
+                      </div>
+                      ккал
+                    </div>
+                  </div>
+                  <div class="slider__col slider__col-right">
+                    <div class="title title_burgers">
+                      Dark Beef Burger
+                    </div>
+                    <div class="slider__text">
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                    </div>
+                    <div class="slider__bottom">
+                      <div class="slider__price">
+                          <span class="slider__price-number">500</span> рублей                         
+                      </div>
+                      <button class="btn slider__btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+              </li>
+              <li class="slider__item">
+                <div class="slider__col slider__col-left">
+                    <div class="slider__composition">
+                      <svg class="slider__burger-icon" viewBox="0 0 45 45">
+                        <use xlink:href="./images/sprite.svg#burger"></use>
+                      </svg>
+                      Состав
+                      <div class="composition__hover">
+                        <ul class="hover__list">
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#beef"></use>
+                            </svg>
+                            <div class="hover__component">Говядина</div>
+                            <div class="hover__weigth">300г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="./images/sprite.svg#buns"></use>
+                            </svg>
+                            <div class="hover__component">Булочки</div>
+                            <div class="hover__weigth">100г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#8ac03e;">
+                              <use xlink:href="./images/sprite.svg#salad"></use>
+                            </svg>
+                            <div class="hover__component">Зелень</div>
+                            <div class="hover__weigth">70г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#e25028;">
+                              <use xlink:href="./images/sprite.svg#sauce"></use>
+                            </svg>
+                            <div class="hover__component">Соус</div>
+                            <div class="hover__weigth">150г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40">
+                              <use xlink:href="images/sprite.svg#cucumber"></use>
+                            </svg>
+                            <div class="hover__component">Овощи</div>
+                            <div class="hover__weigth">200г</div>
+                          </li>
+                          <li class="hover__item">
+                            <svg class="hover__icon" viewBox="0 0 45 40" style="fill:#f8b43a;">
+                              <use xlink:href="images/sprite.svg#cheese"></use>
+                            </svg>
+                            <div class="hover__component">Сыр</div>
+                            <div class="hover__weigth">80г</div>
+                          </li>
+                        </ul>
+                        <div class="hover__close"></div>
+                      </div>
+                    </div>
+                    <div class="slider__pic-wrapper"><img class="slider__pic" src="images/burgers/spicy_shrimp_burger.png" alt=""></div>
+                    <div class="slider__calories">
+                      <div class="slider__calories-picture">
+                        <svg class="slider__calories-icon" viewBox="0 0 60 60" style="fill:#fff;">
+                          <use xlink:href="images/sprite.svg#kkal"></use>
+                        </svg>
+                        <span class="slider__calories-number">1200</span>
+                      </div>
+                      ккал
+                    </div>
+                  </div>
+                  <div class="slider__col slider__col-right">
+                    <div class="title title_burgers">
+                      Dark Beef Burger
+                    </div>
+                    <div class="slider__text">
+                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                    </div>
+                    <div class="slider__bottom">
+                      <div class="slider__price">
+                          <span class="slider__price-number">500</span> рублей                         
+                      </div>
+                      <button class="btn slider__btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
               </li>             
             </ul>
-            <a class="slider__prev-arrow" href="#">
-                <svg class="prev-screen-arrow__icon">
-                  <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
-                </svg>
-              </a>
-              <a class="slider__next-arrow" href="#">
-                <svg class="next-screen-arrow__icon">
-                  <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
-                </svg>
-              </a> 
+            <button class="slider__prev-arrow">
+              <svg class="prev-screen-arrow__icon">
+                <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
+              </svg>
+            </button>
+            <button class="slider__next-arrow">
+              <svg class="next-screen-arrow__icon">
+                <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
+              </svg>
+            </button> 
           </div>
         </section>
         <section class="section team">
