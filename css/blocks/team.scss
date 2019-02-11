@@ -53,6 +53,7 @@
     border-left-width: .31rem;
     border-right-width: .31rem;
     margin-right: .63rem;
+    transition: transform .3s;
   }
 
   &__content {
@@ -60,6 +61,7 @@
     margin-bottom: 1rem;
     height: 0;
     overflow: hidden;
+    transition: height .3s;
 
     @include tablets {
       display: flex;
@@ -121,14 +123,9 @@
   .accordeon__name:before {
     content: "";
     display: inline-block;
-    border: .5rem solid transparent;
-    width: 0;
-    height: 0;
-    border-bottom-color: #f7b33b;
-    border-top-width: 0;
-    border-left-width: .31rem;
-    border-right-width: .31rem;
     margin-right: .63rem;
+    transform: rotate(180deg);
+    transition: .3s;
   }
 
   .accordeon__content {
