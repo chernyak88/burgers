@@ -47,6 +47,10 @@
     
     .menu-acco__trigger {
       background-color: rgba(#2f3234, .9);
+
+      @include phones {
+        width: 3.5rem;
+      }
     }
     
     .menu-acco__trigger-text {
@@ -58,8 +62,12 @@
       max-width: 100%;
       transition: width .3s;
 
+      @include tablets {
+        width: 80%;
+      }
+
       @include phones {
-        width: 70%;
+        width: 90%;
       }
     }
 
@@ -75,6 +83,10 @@
     text-decoration: none;
     position: relative;
     background-color: rgba(#2f3234, .9);
+    
+    @include phones {
+      width: 3.5rem;
+    }
   }
 
   &__trigger-text{
