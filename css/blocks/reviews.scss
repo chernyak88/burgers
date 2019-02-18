@@ -85,6 +85,14 @@
   }
 }
 
+.reviews__btn:before {
+  content: 'Подробнее';
+
+  @include phones {
+    content: 'Читать отзыв';
+  }
+}
+
 .revoverlay {
   display: flex;
   background: rgba(47, 50, 52, .99);

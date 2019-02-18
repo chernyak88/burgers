@@ -49,6 +49,11 @@ revcloseBtn.addEventListener('click', function() {
   revoverlay.style.display = 'none';
 })
 
+revoverlay.addEventListener('click', function() {
+  event.preventDefault();
+  revoverlay.style.display = 'none';
+})
+
 document.addEventListener('keyup', e => {
   let keyName = e.keyCode;
 
@@ -56,6 +61,108 @@ document.addEventListener('keyup', e => {
     revoverlay.style.display = 'none';
   }
 })
+
+  ////////////////// Валидация формы, модальное окно формы
+
+  const myForm = document.querySelector('#form');
+  const orderBtn = myForm.querySelector('.order__form-button');
+  const clearBtn = myForm.querySelector('.order__form-button-reset');
+  const formTrue = myForm.querySelector('.formoverlay-true');
+  const formErr = myForm.querySelector('.formoverlay-error');
+  const formtruecloseBtn = myForm.querySelector('.formtrue__close');
+  const formerrcloseBtn = myForm.querySelector('.formerr__close');
+  
+  orderBtn.addEventListener('click', e=> {
+    event.preventDefault();
+    if (validateForm(myForm)) {
+        const name = myForm.elements.name.value;
+        const phone = myForm.elements.phone.value;
+        const comment = myForm.elements.comment.value;
+        const to = 'webdev@mail.ru';
+        var formData = new FormData();
+            formData.append('name', name);
+            formData.append('phone', phone);
+            formData.append('comment', comment);
+            formData.append('to', to);
+            console.log(formData);
+            const xhr = new XMLHttpRequest();
+            xhr.responseType = 'json';
+            xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/');
+            xhr.send(formData);
+            xhr.addEventListener('load', e => {
+                if (xhr.response.status) {
+                  formTrue.style.display = 'block';    
+                } else {
+                  formErr.style.display = 'block';
+                }
+
+                formtruecloseBtn.addEventListener('click', function() {
+                  event.preventDefault();
+                  formTrue.style.display = 'none';
+                })
+
+                formTrue.addEventListener('click', function() {
+                  event.preventDefault();
+                  formTrue.style.display = 'none';
+                })
+
+                document.addEventListener('keyup', e => {
+                  let keyName = e.keyCode;
+                
+                  if (keyName === 27) {
+                    formTrue.style.display = 'none';
+                  }
+                })
+
+                formerrcloseBtn.addEventListener('click', function() {
+                  event.preventDefault();
+                  formErr.style.display = 'none';
+                })
+
+                formErr.addEventListener('click', function() {
+                  event.preventDefault();
+                  formErr.style.display = 'none';
+                })
+                
+                document.addEventListener('keyup', e => {
+                  let keyName = e.keyCode;
+                
+                  if (keyName === 27) {
+                    formErr.style.display = 'none';
+                  }
+                })
+                
+            })
+    }
+})
+
+function validateForm(myForm) {
+  let valid = true;
+  
+  if (!validateField(myForm.elements.name)) {
+      valid = false;
+  }
+
+  if (!validateField(myForm.elements.phone)) {
+      valid = false;
+  }
+
+  if (!validateField(myForm.elements.comment)) {
+      valid = false;
+  }
+  return valid;
+}
+
+function validateField(field) {
+  if (!field.checkValidity()) {
+      field.nextElementSibling.textContent = field.validationMessage;
+      return false;
+  }
+  else {
+      field.nextElementSibling.textContent = '';
+      return true;
+  }
+}
 
 ////////////////// вертикальный аккордеон (team)
 
@@ -153,67 +260,7 @@ var previous = document.getElementById('prev');
       previousSlide();
   };
 
-  ////////////////// Валидация формы
 
-  const myForm = document.querySelector('#form');
-  const orderBtn = myForm.querySelector('.order__form-button');
-  const clearBtn = myForm.querySelector('.order__form-button-reset');
-  
-  orderBtn.addEventListener('click', e=> {
-    event.preventDefault();
-    if (validateForm(myForm)) {
-        const name = myForm.elements.name.value;
-        const phone = myForm.elements.phone.value;
-        const comment = myForm.elements.comment.value;
-        const to = 'webdev@mail.ru';
-        var formData = new FormData();
-            formData.append('name', name);
-            formData.append('phone', phone);
-            formData.append('comment', comment);
-            formData.append('to', to);
-            console.log(formData);
-            const xhr = new XMLHttpRequest();
-            xhr.responseType = 'json';
-            xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-            xhr.send(formData);
-            xhr.addEventListener('load', e => {
-                if (xhr.response.status){
-                    console.log('Отправлено');    
-                } else {
-                    console.log('Отклонено');
-                }
-                
-            })
-    }
-})
-
-function validateForm(myForm) {
-  let valid = true;
-  
-  if (!validateField(myForm.elements.name)) {
-      valid = false;
-  }
-
-  if (!validateField(myForm.elements.phone)) {
-      valid = false;
-  }
-
-  if (!validateField(myForm.elements.comment)) {
-      valid = false;
-  }
-  return valid;
-}
-
-function validateField(field) {
-  if (!field.checkValidity()) {
-      field.nextElementSibling.textContent = field.validationMessage;
-      return false;
-  }
-  else {
-      field.nextElementSibling.textContent = '';
-      return true;
-  }
-}
 
 
 
