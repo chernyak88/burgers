@@ -247,6 +247,7 @@
 
 .error {
   color: $red;
+  font-size: 10px;
 }
 
 .formoverlay-true, .formoverlay-error {
@@ -276,8 +277,8 @@
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 12.5rem;
-  height: 6.8rem;
+  width: 190px;
+  height: 100px;
   max-width: 90%;
 }
 
@@ -289,8 +290,8 @@
 }
 
 .formtrue__close, .formerr__close {
-  width: 6rem;
-  height: 2.2rem;
+  width: 96px;
+  height: 36px;
   background: $red;
   padding: .5rem 1rem;
   border-radius: 5px;

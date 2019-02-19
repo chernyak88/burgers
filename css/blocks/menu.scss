@@ -58,21 +58,21 @@
     }
 
     .menu-acco__content {
-      width: 50%;
+      width: 40%;
       max-width: 100%;
-      transition: width .3s;
 
       @include tablets {
-        width: 80%;
+        width: 100%;
       }
 
       @include phones {
-        width: 90%;
+        width: 100%;
       }
     }
 
     .menu-acco__text {
       display: block;
+      transition: width .4s;
     }
   }
 
@@ -109,6 +109,7 @@
     background: rgba(#2f3234, .9);
     width: 0;
     overflow: hidden;
+    transition: .4s;
   }
 
   &__text {

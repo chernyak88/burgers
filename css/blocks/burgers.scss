@@ -258,6 +258,11 @@
   @include tablets {
     text-align: center;
   }
+
+  @include phones {
+    font-size: 50px;
+    text-align: center;
+  }
 }
 
 .slider__text {

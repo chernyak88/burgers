@@ -150,6 +150,19 @@ function validateForm(myForm) {
   if (!validateField(myForm.elements.comment)) {
       valid = false;
   }
+
+  if (!validateField(myForm.elements.street)) {
+    valid = false;
+  }
+
+  if (!validateField(myForm.elements.home)) {
+    valid = false;
+  }
+
+  if (!validateField(myForm.elements.appt)) {
+    valid = false;
+  }
+
   return valid;
 }
 
@@ -219,7 +232,7 @@ for (let i = 0; i < accoItemLength; i++) {
     
 var slides = document.querySelectorAll('.slider .slider__item');
 var currentSlide = 0;
-var slideInterval = setInterval(nextSlide, 2000);
+var slideInterval = setInterval(nextSlide, 3000);
 
 function nextSlide() {
   goToSlide(currentSlide+1);
