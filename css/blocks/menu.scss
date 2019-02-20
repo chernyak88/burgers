@@ -36,17 +36,25 @@
     justify-content: flex-end;
   }
 
-  &__item:hover {
-    .menu-acco__trigger {
-      background-color: rgba(#2f3234, 0.7);
+  &__acco__trigger:hover {
+      background: rgba(#2f3234, 0.7);
       transition: .4s;
-    }
   }
 
   &__item--active {
+      width: 40%;
+      max-width: 100%;
+
+      @include tablets {
+        width: 60%;
+      }
+
+      @include phones {
+        width: 100%;
+      }
     
     .menu-acco__trigger {
-      background-color: rgba(#2f3234, .9);
+      background: rgba(#2f3234, .9);
 
       @include phones {
         width: 3.5rem;
@@ -58,16 +66,7 @@
     }
 
     .menu-acco__content {
-      width: 40%;
-      max-width: 100%;
-
-      @include tablets {
-        width: 100%;
-      }
-
-      @include phones {
-        width: 100%;
-      }
+      width: 100%;
     }
 
     .menu-acco__text {
@@ -83,7 +82,9 @@
     text-decoration: none;
     position: relative;
     background-color: rgba(#2f3234, .9);
-    
+    background-repeat: no-repeat;
+    background-size: cover;
+
     @include phones {
       width: 3.5rem;
     }
@@ -118,3 +119,20 @@
     display: none;
   }
 }
+
+.menu-acco__trigger-meat {
+  background: url('../images/meat_bg.jpg') 50% no-repeat;
+  background-size: cover;
+  background-color: rgba(#2f3234, .9);
+}
+
+.menu-acco__trigger-vegan {
+  background: url('../images/vegan_bg.jpg') 8% no-repeat;
+  background-size: cover;
+}
+
+.menu-acco__trigger-diet {
+  background: url('../images/diet_bg.jpg') 50% no-repeat;
+  background-size: cover;
+}
+
