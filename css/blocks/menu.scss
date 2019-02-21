@@ -4,13 +4,13 @@
   position: relative;
   color: #fff;
   display: flex;
-  justify-content: flex-end;
+  overflow: hidden;
 }
 
 .mainmenu__title {
   position: absolute;
   top: 10%;
-  left: 5%;
+  left: 10%;
   color: #fff;
   margin-bottom: 0;
 
@@ -24,64 +24,16 @@
 }
 
 .menu-acco {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
-  justify-content: flex-end;
   
   &__item {
     height: 100%;
-    
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
-    justify-content: flex-end;
-  }
-
-  &__item--active {
-      width: 40%;
-      max-width: 100%;
-
-      @include tablets {
-        width: 60%;
-      }
-
-      @include phones {
-        width: 100%;
-      }
-    
-    .menu-acco__trigger {
-      background: rgba(#2f3234, .9);
-
-      @include phones {
-        width: 3.5rem;
-      }
-    }
-    
-    .menu-acco__trigger-text {
-      color: #f9b43b;
-    }
-
-    .menu-acco__content {
-      width: 100%;
-    }
-
-    .menu-acco__text {
-      display: block;
-      transition: width .4s;
-    }
-  }
-
-  &__trigger {
-    width: 5rem;
-    display: block;
-    height: 100%;
-    text-decoration: none;
-    position: relative;
-    background-color: rgba(#2f3234, .9);
-
-    @include phones {
-      width: 3.5rem;
-    }
-  }
+ }
 
   &__trigger-text{
     font-family: "gagalinregular";
@@ -104,13 +56,45 @@
     background: rgba(#2f3234, .9);
     width: 0;
     overflow: hidden;
-    transition: .4s;
+    transition: width .6s;
   }
 
   &__text {
     font-size: .88rem;
     padding: 3.75rem 1.88rem;
-    display: none;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+}
+
+.menu-acco__trigger {
+  position: relative;
+  width: 5rem;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  background-color: rgba(#2f3234, .9);
+  z-index: 5;
+
+  @include phones {
+    width: 3.5rem;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#2f3234, .7);
+    z-index: 10;
+  }
+  
+  &:hover {
+    background: rgba(#2f3234, .9);
+    transition: .7s;
   }
 }
 
@@ -135,25 +119,40 @@
   background-size: cover;
 }
 
-.menu-acco__trigger {
-  position: relative;
-  z-index: 5;
+.menu-acco__item--active {
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(#2f3234, .7);
-    z-index: 10;
+  .menu-acco__trigger {
+    background: rgba(#2f3234, .9);
+
+    @include phones {
+      width: 3.5rem;
+    }
   }
   
-  &:hover {
-    background: rgba(#2f3234, .9);
-    transition: .7s;
+  .menu-acco__trigger-text {
+    color: #f9b43b;
   }
+
+  .menu-acco__content {
+    width: 520px;
+
+    @include tablets {
+      width: 255px;
+    }
+
+    @include phones {
+      width: 170px;
+    }
+  }
+
+  .menu-acco__text {
+    animation: acco-text .8s linear forwards;
+  }
+}
+
+@keyframes acco-text {
+  75% {opacity: 0; }
+  to { opacity: 1; }
 }
 
 

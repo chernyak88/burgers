@@ -624,7 +624,7 @@
           <ul class="menu-acco">
             <li class="menu-acco__item">
               <a href="#" class="menu-acco__trigger menu-acco__trigger-meat">
-                <span class="menu-acco__trigger-text">Для мясоедов</span> 
+                <div class="menu-acco__trigger-text">Для мясоедов</div> 
               </a>
               <div class="menu-acco__content">
                 <div class="menu-acco__text">
@@ -639,7 +639,7 @@
             </li>
             <li class="menu-acco__item">
               <a href="#" class="menu-acco__trigger menu-acco__trigger-vegan">
-                <span class="menu-acco__trigger-text">Вегетарианское</span> 
+                <div class="menu-acco__trigger-text">Вегетарианское</div> 
               </a>
               <div class="menu-acco__content">
                 <div class="menu-acco__text">
@@ -654,7 +654,7 @@
             </li>
             <li class="menu-acco__item">
               <a href="#" class="menu-acco__trigger menu-acco__trigger-diet">
-                <span class="menu-acco__trigger-text">Диетическое</span> 
+                <div class="menu-acco__trigger-text">Диетическое</div> 
               </a>
               <div class="menu-acco__content">
                 <div class="menu-acco__text">
@@ -769,11 +769,11 @@
                   <div class="order__form-row">
                     <label class="order__form-block order__form-block--margin">
                     <div class="order__form-text">Имя</div>
-                      <input type="text" class="order__form-input" name="name" required><div class="error"></div>
+                      <input type="text" class="order__form-input" id="name" name="name" maxlength="21" required><div class="error"></div>
                     </label>
                     <label class="order__form-block">
                     <div class="order__form-text">Телефон</div>
-                      <input type="number" class="order__form-input" name="phone" maxlength="11" placeholder="89212264923" required><div class="error"></div>
+                      <input type="text" class="order__form-input" id="phone" name="phone" maxlength="15" placeholder="89212264923" required><div class="error"></div>
                     </label>
                   </div>
                   <div class="order__form-row">
@@ -785,19 +785,19 @@
                   <div class="order__form-row">
                     <label class="order__form-block order__form-block--margin">
                     <div class="order__form-text">Дом</div>
-                      <input type="number" class="order__form-input" name="home" required><div class="error"></div>
+                      <input type="text" class="order__form-input" id="home" name="home" maxlength="5" required><div class="error"></div>
                   </label>
                     <label class="order__form-block order__form-block--margin">
                     <div class="order__form-text">Корпус</div>
-                      <input type="text" class="order__form-input" name="part">
+                      <input type="text" class="order__form-input" name="part" maxlength="5">
                   </label>
                     <label class="order__form-block order__form-block--margin">
                     <div class="order__form-text">Квартира</div>
-                      <input type="number" class="order__form-input" name="appt" required><div class="error"></div>
+                      <input type="text" class="order__form-input" name="appt" maxlength="6">
                   </label>
                   <label class="order__form-block order__form-block--floor">
                       <div class="order__form-text">Этаж</div>
-                      <input type="number" class="order__form-input" name="floor">
+                      <input type="text" class="order__form-input" id="floor" name="floor" maxlength="3">
                   </label>
                   </div>
                 </div>

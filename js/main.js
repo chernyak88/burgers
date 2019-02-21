@@ -159,10 +159,6 @@ function validateForm(myForm) {
     valid = false;
   }
 
-  if (!validateField(myForm.elements.appt)) {
-    valid = false;
-  }
-
   return valid;
 }
 
@@ -176,6 +172,89 @@ function validateField(field) {
       return true;
   }
 }
+
+const nameForm = document.querySelector('#name');
+const phoneForm = document.querySelector('#phone');
+const homeForm = document.querySelector('#home');
+const floorForm = document.querySelector('#floor');
+
+nameForm.addEventListener('keydown', function(event) {
+  let isDigit = true;
+  let isDash = false;
+  let isControl = false;
+
+  if (event.key >= 0 || event.key <=9) {
+    isDigit = false;
+  }
+
+  if (event.key == '-') {
+    isDash = true;
+  }
+
+  if (event.key == 'ArrowLeft' || event.key =='ArrowRight' ||event.key == 'Backspace') {
+    isControl = true;
+  }
+
+  if (isDigit == false && isDash == false && isControl == false) {
+    event.preventDefault();
+  }
+})
+
+phoneForm.addEventListener('keydown', function(event) {
+  let isDigit = false;
+  let isDash = false;
+  let isControl = false;
+
+  if (event.key >= 0 || event.key <=9) {
+    isDigit = true;
+  }
+
+  if (event.key == '-') {
+    isDash = true;
+  }
+
+  if (event.key == 'ArrowLeft' || event.key =='ArrowRight' ||event.key == 'Backspace') {
+    isControl = true;
+  }
+
+  if (isDigit == false && isDash == false && isControl == false) {
+    event.preventDefault();
+  }
+})
+
+homeForm.addEventListener('keydown', function(event) {
+  let isDigit = false;
+  let isControl = false;
+
+  if (event.key >= 0 || event.key <=9) {
+    isDigit = true;
+  }
+
+  if (event.key == 'ArrowLeft' || event.key =='ArrowRight' ||event.key == 'Backspace') {
+    isControl = true;
+  }
+
+  if (isDigit == false && isControl == false) {
+    event.preventDefault();
+  }
+})
+
+floorForm.addEventListener('keydown', function(event) {
+  let isDigit = false;
+  let isControl = false;
+
+  if (event.key >= 0 || event.key <=9) {
+    isDigit = true;
+  }
+
+  if (event.key == 'ArrowLeft' || event.key =='ArrowRight' ||event.key == 'Backspace') {
+    isControl = true;
+  }
+
+  if (isDigit == false && isControl == false) {
+    event.preventDefault();
+  }
+})
 
 ////////////////// вертикальный аккордеон (team)
 
