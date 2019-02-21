@@ -85,16 +85,97 @@
   }
 }
 
-.reviews__btn {
+.reviews__btn:before {
+  content: 'Подробнее';
+
   @include phones {
-    display: none;
+    content: 'Читать отзыв';
   }
 }
 
-.reviews__btn--phone {
-  display: none;
+.revoverlay {
+  display: flex;
+  background: rgba(47, 50, 52, .99);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top:0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  display: none;  
+}
+
+.revpopup {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 28.75rem;
+  height: 16rem;
+  max-width: 90%;
+}
+
+.revpopup__content-headline {
+    font-family: "gagalinregular";
+    margin-bottom: 1rem;
+
+    @include tablets {
+      margin-bottom: .4rem;
+    }
+    
+    @include phones {
+      font-size: 24px;
+      line-height: 1.2em;
+    }
+}
+
+.revpopup__content-text {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.5em;
+}
+
+.revpopup__close {
+  position: absolute;
+  right: -10px;
+  top: 15px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+ 
+  &:focus {
+    outline: none;
+  }
 
   @include phones {
-    display: block;
+   top: 10px;
+   right: -22px;
   }
+}
+
+.revpopup__close:before, .revpopup__close:after {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  content: ' ';
+  height: 23px;
+  width: 4px;
+  background-color: #ec8468;
+  border-radius: .63rem;
+}
+
+.revpopup__close:before {
+  transform: rotate(45deg);
+}
+
+.revpopup__close:after {
+  transform: rotate(-45deg);
 }

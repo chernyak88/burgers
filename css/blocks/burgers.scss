@@ -3,14 +3,17 @@
 }
 
 .container__burgers {
+  display: flex;
   max-width: 68.75rem;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 .slider {
   display: flex;
+  position: relative;
 }
 
 .slider__item {
@@ -253,6 +256,11 @@
   color: #fff;
 
   @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: 50px;
     text-align: center;
   }
 }
