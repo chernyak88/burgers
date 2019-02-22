@@ -25,6 +25,27 @@ function createModal() {
   return container;
 }
 
+////////////////// OnePageScroll
+
+$(function () {
+
+  var generateDots = function() {
+    $('.fixed-menu__list').each(function () {
+      var dot = $('<li>', {
+        attr : {
+          class : 'fixed-menu__item'
+        },
+        html : '<a class="fixed-menu__link" href="#"></a>'
+      });
+      $('.fixed-menu__list').append(dot);
+    })
+  };
+
+  generateDots();
+
+
+})
+
 ////////////////// модальное окно отзывов
 
 const reviews = document.querySelector('.reviews__list');
