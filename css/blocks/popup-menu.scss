@@ -27,11 +27,7 @@
 }
 
 .popup__item {
-  font-weight: 300;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  flex-direction: column;
-  cursor: pointer;
+  
   &:after {
     content: "";
     display: block;
@@ -44,6 +40,18 @@
   &:last-child::after {
     display: none;
   }
+  
+}
+
+.popup__link {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  flex-direction: column;
+  cursor: pointer;
+
   &:hover {
     text-decoration: underline;
   }

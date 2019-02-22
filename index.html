@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-        <section class="section hero">
+        <section class="section hero" id="sectionhero">
           <div class="container hero__container">
             <header class="header">
               <div class="header__logo">
@@ -25,31 +25,31 @@
                     <nav class="nav">
                       <ul class="nav__list">
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">о нас</a>
+                          <a class="nav__link" href="#sectionhero">о нас</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">бургеры</a>
+                          <a class="nav__link" href="#sectionburgers">бургеры</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">команда</a>
+                          <a class="nav__link" href="#sectionteam">команда</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">меню</a>
+                          <a class="nav__link" href="#sectionmainmenu">меню</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">отзывы</a>
+                          <a class="nav__link" href="#sectionreviews">отзывы</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">как мы работаем</a>
+                          <a class="nav__link" href="#sectionhowwork">как мы работаем</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">контакты</a>
+                          <a class="nav__link" href="#sectioncontacts">контакты</a>
                         </li>
                       </ul>
                     </nav>
                   </div>
                   <div class="header__links">
-                    <button class="order-link btn" href="" data-scroll-to="7">Заказать</button>
+                    <button class="order-link btn">Заказать</button>
                     <div class="hamburger-menu-link" href="" id="modal">
                       <div class="hamburger-menu-link__bars"></div>
                     </div>
@@ -65,14 +65,14 @@
                 <div class="hero__content-desc">натуральные бургеры</div>
               </div>
             </div>
-            <a href="#" class="arrow-down">
+            <a href="#sectionbest" class="arrow-down">
               <svg class="arrow-down__icon">
                 <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
               </svg>
             </a>
           </div>
         </section>
-        <section class="section section_centered best">
+        <section class="section section_centered best" id="sectionbest">
           <div class="container">
             <div class="title best__title">Мы лучшие</div>
             <ul class="best__list">
@@ -118,7 +118,7 @@
             </ul>
           </div>
         </section>
-        <section class="section burgers">
+        <section class="section burgers" id="sectionburgers">
           <div class="container container__burgers">
             <ul class="slider">
               <li class="slider__item">
@@ -554,7 +554,7 @@
             </button> 
           </div>
         </section>
-        <section class="section team">
+        <section class="section team" id="sectionteam">
           <div class="team__block">
             <div class="team__content">
               <div class="title">Команда</div>
@@ -619,7 +619,7 @@
             </div>
            </div>
         </section>
-        <section class="section mainmenu">
+        <section class="section mainmenu" id="sectionmainmenu">
           <div class="title mainmenu__title">Меню</div>
           <ul class="menu-acco">
             <li class="menu-acco__item">
@@ -669,7 +669,7 @@
             </li>
           </ul>
         </section>
-        <section class="section reviews">
+        <section class="section reviews" id="sectionreviews">
           <ul class="reviews__list">
             <li class="reviews__item" style="background-image: url('./images/photos/user1.jpg')">
               <div class="reviews__item-hover">
@@ -760,10 +760,10 @@
             </div>
           </div>
         </section>
-        <section class="section section_centered howwork">
+        <section class="section section_centered howwork" id="sectionhowwork">
           <div class="title howwork__title">Как мы работаем</div>
         </section>
-        <section class="section section_centered order">
+        <section class="section section_centered order" id="sectionorder">
           <div class="container">
             <div class="title section__title">Закажите доставку</div>
             <form method="post" class="order__form" id="form">
@@ -858,7 +858,7 @@
             </form>
           </div>
         </section>
-        <section class="section contacts">
+        <section class="section contacts" id="sectioncontacts">
           <div class="map">
             <img src="./images/map.jpg" alt="Карта" class="map__img">
           </div>
@@ -911,32 +911,32 @@
       </div>
       <nav class="fixed-menu">
         <ul class="fixed-menu__list">
-          <li class="fixed-menu__item fixed-menu__item_active">
-            <a class="fixed-menu__link" href="#"></a>
+          <li href="#sectionhero" class="fixed-menu__item fixed-menu__item_active">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li href="#sectionbest" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li href="#sectionburgers" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link" ></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li href="#sectionteam" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link" ></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li href="#sectionmainmenu" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li href="#sectionreviews" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li href="#sectionhowwork" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li href="#sectionorder" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href="#"></a>
+          <li href="#sectioncontacts" class="fixed-menu__item">
+              <a href="#" class="fixed-menu__link"></a>
           </li>
         </ul>
       </nav>
@@ -952,12 +952,12 @@
           <button class="popup__close"></button>
           <nav class="nav">
             <ul class="popup__list">
-              <li class="popup__item" data-scroll-to="">О нас</li>
-              <li class="popup__item" data-scroll-to="">Бургеры</li>
-              <li class="popup__item" data-scroll-to="">Команда</li>
-              <li class="popup__item" data-scroll-to="">Меню</li>
-              <li class="popup__item" data-scroll-to="">Отзывы</li>
-              <li class="popup__item" data-scroll-to="">Контакты</li>
+              <li class="popup__item"><a class="popup__link" href="#sectionhero">О нас</a></li>
+              <li class="popup__item"><a class="popup__link" href="#sectionburgers">Бургеры</a></li>
+              <li class="popup__item"><a class="popup__link" href="#sectionteam">Команда</a></li>
+              <li class="popup__item"><a class="popup__link" href="#sectionmainmenu">Меню</a></li>
+              <li class="popup__item"><a class="popup__link" href="#sectionreviews">Отзывы</a></li>
+              <li class="popup__item"><a class="popup__link" href="#sectioncontacts">Контакты</a></li>
             </ul>
           </nav>
         </div>

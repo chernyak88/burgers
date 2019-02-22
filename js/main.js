@@ -3,6 +3,7 @@
 const hamBtn  = document.querySelector('#modal');
 const template = document.querySelector('#modal-template').innerHTML;
 
+
 hamBtn.addEventListener('click', function() {
   const modal = createModal();
 
@@ -22,29 +23,21 @@ function createModal() {
     document.body.style.overflow = '';
   })
 
-  return container;
+  const popupLink = container.querySelectorAll('.popup__link');
+
+    function HidePopup(event) {
+      document.body.removeChild(container);
+      document.body.style.overflow = '';
+    }
+    
+    for (i=0; i < popupLink.length; i++) {
+      popupLink[i].onclick = HidePopup;
+    }
+  
+   return container;
 }
 
-////////////////// OnePageScroll
 
-$(function () {
-
-  var generateDots = function() {
-    $('.fixed-menu__list').each(function () {
-      var dot = $('<li>', {
-        attr : {
-          class : 'fixed-menu__item'
-        },
-        html : '<a class="fixed-menu__link" href="#"></a>'
-      });
-      $('.fixed-menu__list').append(dot);
-    })
-  };
-
-  generateDots();
-
-
-})
 
 ////////////////// модальное окно отзывов
 
@@ -373,6 +366,38 @@ var previous = document.getElementById('prev');
       previousSlide();
   };
 
+
+  ////////////////// Плавная прокрутка
+
+$(document).ready(function(){
+  $('.nav__link').click( function(){
+var scroll_el = $(this).attr('href');
+      if ($(scroll_el).length != 0) {
+    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+      }
+    return false;
+  });
+});
+
+$(document).ready(function(){
+  $('.arrow-down').click( function(){
+var scroll_el = $(this).attr('href');
+      if ($(scroll_el).length != 0) {
+    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+      }
+    return false;
+  });
+});
+
+$(document).ready(function(){
+  $('.fixed-menu__item').click( function(){
+var scroll_el = $(this).attr('href');
+      if ($(scroll_el).length != 0) {
+    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+      }
+    return false;
+  });
+});
 
 
 
