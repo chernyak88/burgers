@@ -37,8 +37,6 @@ function createModal() {
    return container;
 }
 
-
-
 ////////////////// модальное окно отзывов
 
 const reviews = document.querySelector('.reviews__list');
@@ -366,39 +364,113 @@ var previous = document.getElementById('prev');
       previousSlide();
   };
 
+////////////////// OnePageScroll
 
-  ////////////////// Плавная прокрутка
+const sections = $('.section');
+const display = $('.maincontent');
 
-$(document).ready(function(){
-  $('.nav__link').click( function(){
-var scroll_el = $(this).attr('href');
-      if ($(scroll_el).length != 0) {
-    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-      }
-    return false;
-  });
+let inscroll = false;
+
+const md = new MobileDetect(window.navigator.userAgent);
+
+const isMobile = md.mobile();
+
+const switchActiveClassInsideMenu = menuItemIndex => {
+  $('.fixed-menu__item').eq(menuItemIndex).addClass('fixed-menu__item_active').siblings().removeClass('fixed-menu__item_active');
+}
+
+const performTransition = sectionEq => {
+    if (inscroll) return;
+
+    const sectionEqNum = parseInt(sectionEq);
+
+    if (!!sectionEqNum === false) console.error('неверное значение для аргумента sectionEq'); 
+
+    inscroll = true;
+    
+    const position = (sectionEqNum * -100) + '%';
+
+    sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
+    
+    display.css({
+      'transform' : `translateY(${position})`
+    });
+
+    setTimeout(() => {
+      inscroll = false;
+      switchActiveClassInsideMenu(sectionEq);
+    }, 1000 + 300); //продолжительность transition + 300ms - время для завершения инерции тачустройств
+
+  };
+  
+
+const scrollToSection = direction => {
+  const activeSection = sections.filter('.active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if (direction === 'next' && nextSection.length) {
+    performTransition(nextSection.index())
+  }
+
+  if (direction === 'prev' && prevSection.length) {
+    performTransition(prevSection.index())
+  }
+}
+
+$('.wrapper').on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    scrollToSection('next');
+  }
+
+  if (deltaY < 0) {
+    scrollToSection('prev');
+  }
 });
 
-$(document).ready(function(){
-  $('.arrow-down').click( function(){
-var scroll_el = $(this).attr('href');
-      if ($(scroll_el).length != 0) {
-    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-      }
-    return false;
-  });
+$('.wrapper').on('touchmove', e => {
+  e.preventDefault();
 });
 
-$(document).ready(function(){
-  $('.fixed-menu__item').click( function(){
-var scroll_el = $(this).attr('href');
-      if ($(scroll_el).length != 0) {
-    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-      }
-    return false;
-  });
+$(document).on('keydown', e => {
+  switch(e.keyCode) {
+    case 38: scrollToSection('prev'); break;
+    case 40: scrollToSection('next'); break;
+  }
 });
 
+$('[data-scroll-to]').on('click', e=> {
+  e.preventDefault();
+
+  const target = $(e.currentTarget).attr('data-scroll-to');
+  performTransition(target);
+});
+
+if (isMobile) {
+  $(window).swipe({
+    swipe: function(event, direction) {
+      const nextOrPrev = direction === 'up' ? 'next' : 'prev';
+      scrollToSection(nextOrPrev);
+    }
+  });
+}
+
+////////////////// Видеоплеер
+
+let player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
+    height: '405',
+    width: '660',
+    videoId: 'zmg_jOwa9Fc',
+    events: {
+      //'onReady': onPlayerReady,
+      //'onStateChange': onPlayerStateChange
+    }
+  });
+}
 
 
 

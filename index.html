@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-        <section class="section hero" id="sectionhero">
+        <section class="section hero active">
           <div class="container hero__container">
             <header class="header">
               <div class="header__logo">
@@ -25,34 +25,31 @@
                     <nav class="nav">
                       <ul class="nav__list">
                         <li class="nav__item">
-                          <a class="nav__link" href="#sectionhero">о нас</a>
+                          <a class="nav__link" href="#" data-scroll-to="0">о нас</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="#sectionburgers">бургеры</a>
+                          <a class="nav__link" href="#" data-scroll-to="2">бургеры</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="#sectionteam">команда</a>
+                          <a class="nav__link" href="#" data-scroll-to="3">команда</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="#sectionmainmenu">меню</a>
+                          <a class="nav__link" href="#" data-scroll-to="4">меню</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="#sectionreviews">отзывы</a>
+                          <a class="nav__link" href="#" data-scroll-to="5">отзывы</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="#sectionhowwork">как мы работаем</a>
+                          <a class="nav__link" href="#" data-scroll-to="6">как мы работаем</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="#sectioncontacts">контакты</a>
+                          <a class="nav__link" href="#" data-scroll-to="8">контакты</a>
                         </li>
                       </ul>
                     </nav>
                   </div>
                   <div class="header__links">
-                    <button class="order-link btn">Заказать</button>
-                    <div class="hamburger-menu-link" href="" id="modal">
-                      <div class="hamburger-menu-link__bars"></div>
-                    </div>
+                    <button class="order-link btn" data-scroll-to="7">Заказать</button>  
                   </div>
                 </div>
               </header>
@@ -65,14 +62,14 @@
                 <div class="hero__content-desc">натуральные бургеры</div>
               </div>
             </div>
-            <a href="#sectionbest" class="arrow-down">
+            <a href="#" class="arrow-down" data-scroll-to="1">
               <svg class="arrow-down__icon">
                 <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
               </svg>
             </a>
           </div>
         </section>
-        <section class="section section_centered best" id="sectionbest">
+        <section class="section section_centered best">
           <div class="container">
             <div class="title best__title">Мы лучшие</div>
             <ul class="best__list">
@@ -118,7 +115,7 @@
             </ul>
           </div>
         </section>
-        <section class="section burgers" id="sectionburgers">
+        <section class="section burgers">
           <div class="container container__burgers">
             <ul class="slider">
               <li class="slider__item">
@@ -554,7 +551,7 @@
             </button> 
           </div>
         </section>
-        <section class="section team" id="sectionteam">
+        <section class="section team">
           <div class="team__block">
             <div class="team__content">
               <div class="title">Команда</div>
@@ -619,7 +616,7 @@
             </div>
            </div>
         </section>
-        <section class="section mainmenu" id="sectionmainmenu">
+        <section class="section mainmenu">
           <div class="title mainmenu__title">Меню</div>
           <ul class="menu-acco">
             <li class="menu-acco__item">
@@ -669,7 +666,7 @@
             </li>
           </ul>
         </section>
-        <section class="section reviews" id="sectionreviews">
+        <section class="section reviews">
           <ul class="reviews__list">
             <li class="reviews__item" style="background-image: url('./images/photos/user1.jpg')">
               <div class="reviews__item-hover">
@@ -760,10 +757,26 @@
             </div>
           </div>
         </section>
-        <section class="section section_centered howwork" id="sectionhowwork">
+        <section class="section section_centered howwork">
           <div class="title howwork__title">Как мы работаем</div>
+          <div class="player">
+            <div class="player__wrapper">
+              <div id="yt-player"></div>
+              <div class="player__splash"></div>
+            </div>
+            <div class="player__controls">
+              <button class="player__start"></button>
+              <div class="player__playback">
+                <button class="player__playback-button"></button>
+              </div>
+              <div class="player__duration">
+                <span class="player__duration-completed">0:00</span>
+                <span class="player__duration-estimate">0:00</span>
+              </div>
+            </div>
+          </div>
         </section>
-        <section class="section section_centered order" id="sectionorder">
+        <section class="section section_centered order">
           <div class="container">
             <div class="title section__title">Закажите доставку</div>
             <form method="post" class="order__form" id="form">
@@ -858,7 +871,7 @@
             </form>
           </div>
         </section>
-        <section class="section contacts" id="sectioncontacts">
+        <section class="section contacts">
           <div class="map">
             <img src="./images/map.jpg" alt="Карта" class="map__img">
           </div>
@@ -911,35 +924,38 @@
       </div>
       <nav class="fixed-menu">
         <ul class="fixed-menu__list">
-          <li href="#sectionhero" class="fixed-menu__item fixed-menu__item_active">
+          <li data-scroll-to="0" class="fixed-menu__item fixed-menu__item_active">
             <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li href="#sectionbest" class="fixed-menu__item">
+          <li data-scroll-to="1" class="fixed-menu__item">
             <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li href="#sectionburgers" class="fixed-menu__item">
+          <li data-scroll-to="2" class="fixed-menu__item">
             <a href="#" class="fixed-menu__link" ></a>
           </li>
-          <li href="#sectionteam" class="fixed-menu__item">
+          <li data-scroll-to="3" class="fixed-menu__item">
             <a href="#" class="fixed-menu__link" ></a>
           </li>
-          <li href="#sectionmainmenu" class="fixed-menu__item">
+          <li data-scroll-to="4" class="fixed-menu__item">
             <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li href="#sectionreviews" class="fixed-menu__item">
+          <li data-scroll-to="5" class="fixed-menu__item">
             <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li href="#sectionhowwork" class="fixed-menu__item">
+          <li data-scroll-to="6" class="fixed-menu__item">
             <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li href="#sectionorder" class="fixed-menu__item">
+          <li data-scroll-to="7" class="fixed-menu__item">
             <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li href="#sectioncontacts" class="fixed-menu__item">
+          <li data-scroll-to="8" class="fixed-menu__item">
               <a href="#" class="fixed-menu__link"></a>
           </li>
         </ul>
       </nav>
+      <div class="hamburger-menu-link" href="#" id="modal">
+        <div class="hamburger-menu-link__bars"></div>
+      </div>
       <script type="template" id="modal-template">
         <div class="overlay">
           <div class="popup__logo">
@@ -952,18 +968,21 @@
           <button class="popup__close"></button>
           <nav class="nav">
             <ul class="popup__list">
-              <li class="popup__item"><a class="popup__link" href="#sectionhero">О нас</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sectionburgers">Бургеры</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sectionteam">Команда</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sectionmainmenu">Меню</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sectionreviews">Отзывы</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sectioncontacts">Контакты</a></li>
+              <li class="popup__item"><a class="popup__link" href="#" data-scroll-to="0">О нас</a></li>
+              <li class="popup__item"><a class="popup__link" href="#" data-scroll-to="2">Бургеры</a></li>
+              <li class="popup__item"><a class="popup__link" href="#" data-scroll-to="3">Команда</a></li>
+              <li class="popup__item"><a class="popup__link" href="#" data-scroll-to="4">Меню</a></li>
+              <li class="popup__item"><a class="popup__link" href="#" data-scroll-to="5">Отзывы</a></li>
+              <li class="popup__item"><a class="popup__link" href="#" data-scroll-to="8">Контакты</a></li>
             </ul>
           </nav>
         </div>
     </script>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>
