@@ -24,14 +24,12 @@ function createModal() {
   })
 
   const popupLink = container.querySelectorAll('.popup__link');
-
-    function HidePopup(event) {
-      document.body.removeChild(container);
-      document.body.style.overflow = '';
-    }
     
     for (i=0; i < popupLink.length; i++) {
-      popupLink[i].onclick = HidePopup;
+      popupLink[i].addEventListener('click', function() {
+        document.body.removeChild(container);
+        document.body.style.overflow = '';
+      })
     }
   
    return container;
@@ -486,9 +484,9 @@ if(video.paused) {
 function updateButton() {
 const icon=this.paused;
 if(icon) {
-    toggle.innerHTML = '<img src="../images/icons/play.png" alt="Громкость">'; 
+    toggle.innerHTML = '<img src="./images/icons/play.png" alt="Play">'; 
 } else {
-    toggle.innerHTML = '<img src="../images/icons/pause.png" style="height:25px; width:25px">'; 
+    toggle.innerHTML = '<img src="./images/icons/pause.png" style="height:25px; width:25px">'; 
 }
 }
 
@@ -498,7 +496,7 @@ if(viMute) {
     mute.innerHTML = '<img src="./images/icons/volume.png" alt="Громкость">'; 
     video.muted=false;
 }   else {
-    mute.innerHTML = '<img src="../images/icons/mute.png" style="height:18px; width:18px">'; 
+    mute.innerHTML = '<img src="./images/icons/mute.png" style="height:18px; width:18px">'; 
     video.muted= true;
 }
 }
