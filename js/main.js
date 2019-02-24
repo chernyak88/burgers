@@ -384,8 +384,6 @@ const performTransition = sectionEq => {
 
     const sectionEqNum = parseInt(sectionEq);
 
-    if (!!sectionEqNum === false) console.error('неверное значение для аргумента sectionEq'); 
-
     inscroll = true;
     
     const position = (sectionEqNum * -100) + '%';
@@ -459,17 +457,149 @@ if (isMobile) {
 
 ////////////////// Видеоплеер
 
-let player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('yt-player', {
-    height: '405',
-    width: '660',
-    videoId: 'zmg_jOwa9Fc',
-    events: {
-      //'onReady': onPlayerReady,
-      //'onStateChange': onPlayerStateChange
+const player = document.querySelector('.player');
+const video = player.querySelector('.viewer');
+const toggle = player.querySelector('.toggle');
+const mute = player.querySelector('.mute');
+
+const progress = player.querySelector('.progress');
+const progressBar = player.querySelector('.progress__filled');
+const range = player.querySelector('.player__slider');
+const bufferedTimeDur = player.querySelector('.buffered__time');
+const bufferedTimeCur = player.querySelector('.buffered__time-curent');
+
+$('.player__splash').on('click', e => {
+  video.play();
+  $('.player').addClass('active');
+})
+
+function togglePlay() {
+
+if(video.paused) {
+    video.play();
+    $('.player').addClass('active');
+}else {
+    video.pause();
+    $('.player').removeClass('active');
+};    
+}
+function updateButton() {
+const icon=this.paused;
+if(icon) {
+    toggle.innerHTML = '<img src="../images/icons/play.png" alt="Громкость">'; 
+} else {
+    toggle.innerHTML = '<img src="../images/icons/pause.png" style="height:25px; width:25px">'; 
+}
+}
+
+function muteButton() {
+let viMute= video.muted;
+if(viMute) {
+    mute.innerHTML = '<img src="./images/icons/volume.png" alt="Громкость">'; 
+    video.muted=false;
+}   else {
+    mute.innerHTML = '<img src="../images/icons/mute.png" style="height:18px; width:18px">'; 
+    video.muted= true;
+}
+}
+
+function handleRangeUpdate() {
+video.volume = this.value/100;
+}
+
+function handleProgress() {
+const percent = (video.currentTime / video.duration) * 100;
+progressBar.style.left = `${percent}%`;
+}
+
+function scrub(e) {
+const scrubTime = (e.offsetX / progress.offsetWidth)* video.duration;
+video.currentTime = scrubTime;
+}
+function vidSeek(){
+var seekto = video.duration * (progress.value / 100);
+video.currentTime = seekto;
+}
+function seektimeupdate(){
+var nt = video.currentTime * (100 / video.duration);
+progress.value = nt;
+var curmins = Math.floor(video.currentTime / 60);
+var cursecs = Math.floor(video.currentTime - curmins * 60);
+var durmins = Math.floor(video.duration / 60);
+var dursecs = Math.floor(video.duration - durmins * 60);
+if(cursecs < 10){ cursecs = "0"+cursecs; }
+if(dursecs < 10){ dursecs = "0"+dursecs; }
+if(curmins < 10){ curmins = "0"+curmins; }
+if(durmins < 10){ durmins = "0"+durmins; }
+bufferedTimeCur.innerHTML = curmins+":"+cursecs;
+bufferedTimeDur.innerHTML = durmins+":"+dursecs;
+}
+
+video.addEventListener('click',togglePlay );
+video.addEventListener('play',updateButton);
+video.addEventListener('pause',updateButton);
+mute.addEventListener('click',muteButton);
+
+video.addEventListener("timeupdate",seektimeupdate,false);
+video.addEventListener('timeupdate',handleProgress);
+
+toggle.addEventListener('click', togglePlay);
+
+range.addEventListener('change', handleRangeUpdate);
+range.addEventListener('mousemove', handleRangeUpdate);
+
+progress.addEventListener('click',scrub);
+
+
+//yandex maps location
+
+ymaps.ready(init);
+
+var placemarks = [
+    {
+        latitude: 59.97,
+        longitude: 30.31,
+
+    },
+    {
+        latitude: 59.94,
+        longitude: 30.25,
+
+    },
+    {
+        latitude: 59.93,
+        longitude: 30.34,
+       
+    },
+    {
+        latitude: 59.87,
+        longitude: 30.46,
     }
-  });
+],
+    geoObjects= [];
+
+function init() {
+    var map = new ymaps.Map('map', {
+        center: [59.94, 30.32],
+        zoom: 10,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
+
+    for (var i = 0; i < placemarks.length; i++) {
+            geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude], {
+                hintContent: '<p class="hint">Здесь будет адрес</p>',
+                baloonContent: '<p class="baloon">this is baloon</p>'
+            },
+                
+            {
+                iconLayout: 'default#image',
+                iconImageHref: '../images/icons/map-marker.png',
+                iconImageOffset: [-23, -57],
+                iconImageSize: [46, 57]
+            });
+            map.geoObjects.add(geoObjects[i]);
+    };
 }
 
 

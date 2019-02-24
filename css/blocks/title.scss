@@ -3,4 +3,9 @@
   font-size: 4.5rem;
   color: #f9b43b;
   margin-bottom: 1.88rem;
+
+  @include tablets {
+    margin-bottom: 1rem;
+    line-height: 1em;
+  }
 }
