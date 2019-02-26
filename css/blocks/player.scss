@@ -1,7 +1,25 @@
 .player {
   width: 60%;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/player-splash.jpg') center center / cover no-repeat;
+    }
+}
+
+.player--active {
+  width: 60%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
   @media screen and (max-width: 768px) {
     .player {
@@ -12,25 +30,8 @@
       width: 90%; } 
   }
 
-.player {
-  &.active .player__splash {
-    display: none;
-  }
-}
-
 .player__video {
-  width: 100%; 
-}
-
-.player__splash {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('../images/player-splash.jpg') center center / cover no-repeat;
-  cursor: pointer;
+  width: 100%;
 }
 
 .player__controls {

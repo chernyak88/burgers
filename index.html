@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-        <section class="section hero active" id="sec1">
+        <section class="section hero active">
           <div class="container hero__container">
             <header class="header">
               <div class="header__logo">
@@ -69,7 +69,7 @@
             </a>
           </div>
         </section>
-        <section class="section section_centered best" id="sec2">
+        <section class="section section_centered best">
           <div class="container">
             <div class="title best__title">Мы лучшие</div>
             <ul class="best__list">
@@ -115,7 +115,7 @@
             </ul>
           </div>
         </section>
-        <section class="section burgers" id="sec3">
+        <section class="section burgers">
           <div class="container container__burgers">
             <ul class="slider">
               <li class="slider__item">
@@ -551,7 +551,7 @@
             </button> 
           </div>
         </section>
-        <section class="section team" id="sec4">
+        <section class="section team">
           <div class="team__block">
             <div class="team__content">
               <div class="title">Команда</div>
@@ -616,7 +616,7 @@
             </div>
            </div>
         </section>
-        <section class="section mainmenu" id="sec5">
+        <section class="section mainmenu">
           <div class="title mainmenu__title">Меню</div>
           <ul class="menu-acco">
             <li class="menu-acco__item">
@@ -666,7 +666,7 @@
             </li>
           </ul>
         </section>
-        <section class="section reviews" id="sec6">
+        <section class="section reviews">
           <ul class="reviews__list">
             <li class="reviews__item" style="background-image: url('./images/photos/user1.jpg')">
               <div class="reviews__item-hover">
@@ -757,13 +757,12 @@
             </div>
           </div>
         </section>
-        <section class="section section_centered howwork" id="sec7">
+        <section class="section section_centered howwork">
           <div class="title howwork__title">Как мы работаем</div>
           <div class="player">
             <video class="player__video viewer">
                 <source src="./video/vopper.mp4" type="video/mp4">
             </video>
-            <div class="player__splash"></div>
             <div class="player__controls">
                 <button class="player__button toggle" title="Play">
                   <img src="./images/icons/play.png" alt="Play">
@@ -783,7 +782,7 @@
             </div>
           </div> 
         </section>
-        <section class="section section_centered order" id="sec8">
+        <section class="section section_centered order">
           <div class="container">
             <div class="title section__title">Закажите доставку</div>
             <form method="post" class="order__form" id="form">
@@ -878,7 +877,7 @@
             </form>
           </div>
         </section>
-        <section class="section map" id="sec9">
+        <section class="section map">
           <div class="container--map">
             <div class="location" id="map">
               <img src="./images/map.jpg" alt="Карта" class="location__img">             
@@ -965,8 +964,8 @@
       <div class="hamburger-menu-link" href="#" id="modal">
         <div class="hamburger-menu-link__bars"></div>
       </div>
-      <script type="template" id="modal-template">
-        <div class="overlay">
+
+        <div class="popup">
           <div class="popup__logo">
             <a href="index.html">
               <svg class="popup__img" viewBox="0 0 100 75">
@@ -977,16 +976,16 @@
           <button class="popup__close"></button>
           <nav class="nav">
             <ul class="popup__list">
-              <li class="popup__item"><a class="popup__link" href="#sec1">О нас</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sec3">Бургеры</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sec4">Команда</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sec5">Меню</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sec6">Отзывы</a></li>
-              <li class="popup__item"><a class="popup__link" href="#sec9">Контакты</a></li>
+              <li data-scroll-to="0" class="popup__item">О нас</li>
+              <li data-scroll-to="2" class="popup__item">Бургеры</li>
+              <li data-scroll-to="3" class="popup__item">Команда</li>
+              <li data-scroll-to="4" class="popup__item">Меню</li>
+              <li data-scroll-to="5" class="popup__item">Отзывы</li>
+              <li data-scroll-to="8" class="popup__item">Контакты</li>
             </ul>
           </nav>
         </div>
-    </script>
+
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>

@@ -1,40 +1,3 @@
-////////////////// hamburger-меню
-
-const hamBtn  = document.querySelector('#modal');
-const template = document.querySelector('#modal-template').innerHTML;
-
-
-hamBtn.addEventListener('click', function() {
-  const modal = createModal();
-
-  document.body.appendChild(modal);
-  document.body.style.overflow = 'hidden';
-})
-
-function createModal() {
-  const container = document.createElement('div');
-  container.className = 'popup';
-  container.innerHTML = template;
-
-  const closeBtn = container.querySelector('.popup__close');
-  
-  closeBtn.addEventListener('click', function() {
-    document.body.removeChild(container);
-    document.body.style.overflow = '';
-  })
-
-  const popupLink = container.querySelectorAll('.popup__link');
-    
-    for (i=0; i < popupLink.length; i++) {
-      popupLink[i].addEventListener('click', function() {
-        document.body.removeChild(container);
-        document.body.style.overflow = '';
-      })
-    }
-  
-   return container;
-}
-
 ////////////////// модальное окно отзывов
 
 const reviews = document.querySelector('.reviews__list');
@@ -453,6 +416,30 @@ if (isMobile) {
   });
 }
 
+const hamBtn  = document.querySelector('.hamburger-menu-link');
+const popupMenu = document.querySelector('.popup');
+
+hamBtn.addEventListener('click', function(){
+  popupMenu.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+});
+
+const closeBtn = document.querySelector('.popup__close');
+  
+closeBtn.addEventListener('click', function() {
+  popupMenu.style.display = 'none';
+  document.body.style.overflow = '';
+});
+
+const popupItem = document.querySelectorAll('.popup__item');
+
+for (i = 0; i < popupItem.length; i++) {
+  popupItem[i].onclick = function(){
+    popupMenu.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+}
+
 ////////////////// Видеоплеер
 
 const player = document.querySelector('.player');
@@ -466,19 +453,20 @@ const range = player.querySelector('.player__slider');
 const bufferedTimeDur = player.querySelector('.buffered__time');
 const bufferedTimeCur = player.querySelector('.buffered__time-curent');
 
-$('.player__splash').on('click', e => {
+$('.player:before').on('click', e => {
   video.play();
-  $('.player').addClass('active');
+  $('.player').addClass('player--active');
+  $('.player--active').removeClass('player');
 })
 
 function togglePlay() {
 
 if(video.paused) {
     video.play();
-    $('.player').addClass('active');
+    $('.player').addClass('player--active');
+    $('.player--active').removeClass('player');
 }else {
     video.pause();
-    $('.player').removeClass('active');
 };    
 }
 function updateButton() {
