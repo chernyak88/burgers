@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-        <section class="section hero">
+        <section class="section hero active">
           <div class="container hero__container">
             <header class="header">
               <div class="header__logo">
@@ -25,34 +25,31 @@
                     <nav class="nav">
                       <ul class="nav__list">
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">о нас</a>
+                          <a class="nav__link" href="#" data-scroll-to="0">о нас</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">бургеры</a>
+                          <a class="nav__link" href="#" data-scroll-to="2">бургеры</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">команда</a>
+                          <a class="nav__link" href="#" data-scroll-to="3">команда</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">меню</a>
+                          <a class="nav__link" href="#" data-scroll-to="4">меню</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">отзывы</a>
+                          <a class="nav__link" href="#" data-scroll-to="5">отзывы</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">как мы работаем</a>
+                          <a class="nav__link" href="#" data-scroll-to="6">как мы работаем</a>
                         </li>
                         <li class="nav__item">
-                          <a class="nav__link" href="" data-scroll-to="">контакты</a>
+                          <a class="nav__link" href="#" data-scroll-to="8">контакты</a>
                         </li>
                       </ul>
                     </nav>
                   </div>
                   <div class="header__links">
-                    <button class="order-link btn" href="" data-scroll-to="7">Заказать</button>
-                    <div class="hamburger-menu-link" href="" id="modal">
-                      <div class="hamburger-menu-link__bars"></div>
-                    </div>
+                    <button class="order-link btn" data-scroll-to="7">Заказать</button>  
                   </div>
                 </div>
               </header>
@@ -65,7 +62,7 @@
                 <div class="hero__content-desc">натуральные бургеры</div>
               </div>
             </div>
-            <a href="#" class="arrow-down">
+            <a href="#" class="arrow-down" data-scroll-to="1">
               <svg class="arrow-down__icon">
                 <use xlink:href="./images/sprite.svg#arrow-scroll"></use>
               </svg>
@@ -760,6 +757,31 @@
             </div>
           </div>
         </section>
+        <section class="section section_centered howwork">
+          <div class="title howwork__title">Как мы работаем</div>
+          <div class="player">
+            <video class="player__video viewer">
+                <source src="./video/vopper.mp4" type="video/mp4">
+            </video>
+            <div class="player__controls">
+                <button class="player__button toggle" title="Play">
+                  <img src="./images/icons/play.png" alt="Play">
+                </button>
+                <div class="progress">
+                    <div class="progress__filled"></div>
+                </div>
+                <div class="player__volume">
+                    <button class="player__button mute" title="Mute"> 
+                        <img src="./images/icons/volume.png" alt="Громкость">
+                    </button>
+                    <input type="range" name="volume" class="player__slider" min="0" max="100" step="5" value="100">
+                </div>
+                <div class="buffered">
+                    <span class="buffered__time-curent">00:00</span> <span>/</span> <span class="buffered__time">00:00</span>
+                </div>
+            </div>
+          </div> 
+        </section>
         <section class="section section_centered order">
           <div class="container">
             <div class="title section__title">Закажите доставку</div>
@@ -855,9 +877,11 @@
             </form>
           </div>
         </section>
-        <section class="section contacts">
-          <div class="map">
-            <img src="./images/map.jpg" alt="Карта" class="map__img">
+        <section class="section map">
+          <div class="container--map">
+            <div class="location" id="map">
+              <img src="./images/map.jpg" alt="Карта" class="location__img">             
+            </div>
           </div>
           <footer class="footer">
             <div class="container footer__container">
@@ -908,37 +932,40 @@
       </div>
       <nav class="fixed-menu">
         <ul class="fixed-menu__list">
-          <li class="fixed-menu__item fixed-menu__item_active">
-            <a class="fixed-menu__link" href="#"></a>
+          <li data-scroll-to="0" class="fixed-menu__item fixed-menu__item_active">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li data-scroll-to="1" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li data-scroll-to="2" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link" ></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li data-scroll-to="3" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link" ></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li data-scroll-to="4" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li data-scroll-to="5" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li data-scroll-to="6" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="#"></a>
+          <li data-scroll-to="7" class="fixed-menu__item">
+            <a href="#" class="fixed-menu__link"></a>
           </li>
-          <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href="#"></a>
+          <li data-scroll-to="8" class="fixed-menu__item">
+              <a href="#" class="fixed-menu__link"></a>
           </li>
         </ul>
       </nav>
-      <script type="template" id="modal-template">
-        <div class="overlay">
+      <div class="hamburger-menu-link" href="#" id="modal">
+        <div class="hamburger-menu-link__bars"></div>
+      </div>
+
+        <div class="popup">
           <div class="popup__logo">
             <a href="index.html">
               <svg class="popup__img" viewBox="0 0 100 75">
@@ -949,17 +976,21 @@
           <button class="popup__close"></button>
           <nav class="nav">
             <ul class="popup__list">
-              <li class="popup__item" data-scroll-to="">О нас</li>
-              <li class="popup__item" data-scroll-to="">Бургеры</li>
-              <li class="popup__item" data-scroll-to="">Команда</li>
-              <li class="popup__item" data-scroll-to="">Меню</li>
-              <li class="popup__item" data-scroll-to="">Отзывы</li>
-              <li class="popup__item" data-scroll-to="">Контакты</li>
+              <li data-scroll-to="0" class="popup__item">О нас</li>
+              <li data-scroll-to="2" class="popup__item">Бургеры</li>
+              <li data-scroll-to="3" class="popup__item">Команда</li>
+              <li data-scroll-to="4" class="popup__item">Меню</li>
+              <li data-scroll-to="5" class="popup__item">Отзывы</li>
+              <li data-scroll-to="8" class="popup__item">Контакты</li>
             </ul>
           </nav>
         </div>
-    </script>
+
   </div>
-<script src="./js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<1c84d5c8-5eb2-4bb8-9f85-6230bacda4ad>&lang=ru_RU" type="text/javascript"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

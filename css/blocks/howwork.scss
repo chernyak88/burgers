@@ -1,0 +1,11 @@
+.howwork {
+  background: url('../images/howwork_bg.jpg') center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.howwork__title {
+  color: $black;
+}
